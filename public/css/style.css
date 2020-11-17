@@ -1,0 +1,180 @@
+/* ****** COLOR ********/
+
+/* 
+Lavender #C96ED9
+Azure #3567AD
+Blush #BC4167
+Chalky #EDC990 
+*/
+
+/* ****** GLOBAL ********/
+
+
+body {
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+
+h1, h2, .logo {
+    font-family: 'Finger Paint', cursive;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+button {
+    width: 165px;
+    height: 37px;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #bc4167;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 1px 6px -1px grey;
+    margin: 10px;
+    transform: scale(1);
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+    background-color: #a03555;
+}
+
+.section {
+    padding-left: 110px;
+    padding-right: 110px;
+}
+
+/* ****** NAV ********/
+
+.nav {
+    background-color: whitesmoke;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: brown;
+    margin: 0 10px;
+}
+
+.nav .logo img {
+    height: 50px;
+}
+
+/* ****** FOOTER ********/
+
+footer {
+    height: 75px;
+    width: 100%;
+    background-color: black;
+    
+}
+
+/**************************/
+/* ****** HOMEPAGE ********/
+/**************************/
+
+/* ****** HEADER **********/
+
+.home-header {
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 50px;
+}
+
+.home-title-div {
+    min-width: 40%;
+}
+
+.home-title-div h1 {
+    position: relative;
+    font-size: 45px;
+    margin-bottom: 65px;
+}
+
+.home-title-div h1:after {
+    content: "";
+    width: 250px;
+    height: 6px;
+    background: linear-gradient(to right, #bc4167, #edc990);
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    border-radius: 2px;
+}
+
+.home-header-btn {
+    display: flex;
+}
+
+.home-header-btn button {
+    display: flex;
+}
+
+.home-design-div img {
+    max-width: 100%;
+}
+
+/* ****** ABOUT **********/
+
+.about-div {
+    padding-top: 100px;
+    padding-bottom: 135px;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.square-div {
+    min-width: 300px;
+    position: relative;
+}
+
+.square {
+    background-color: #a03555;
+    position: relative;
+    height: 250px;
+    width: 250px;
+}
+
+.square:before {
+    background-color: hsla(330, 5%, 8%, 0.624);
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 250px;
+    width: 250px;
+}
+
+.square-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 38px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -65px;
+    left: 60px;
+    margin: 0px;
+}
+
+.about-text-div {
+    max-width: 65%;
+    margin-left: 50px;
+    padding-top: 25px;
+}

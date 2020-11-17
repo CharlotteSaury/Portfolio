@@ -1,20 +1,41 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Charlotte SAURY{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="home-header">
+        <div class="home-title-div">
+            <h1>Charlotte Saury</h1>
+            <h2>Développeuse Web PHP/Symfony</h2>
+            <h5>A l'écoute d'opportunités sur la région de Vannes</h5>
+            <div class="home-header-btn">
+                <button type="button" data-aos="zoom-in" data-aos-duration="1000">Me contacter</button>
+                <button type="button" data-aos="zoom-in" data-aos-duration="1000">Mon CV</button>
+            </div>
+        </div>
+        <div class="home-design-div">
+            <img src="{{ asset('images/home.jpg') }}" alt="web development picture" />
+        </div>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="about-div section" id="aboutDiv">
+        <div class="square-div" data-aos="fade-right" data-aos-duration="2000">
+            <div class="square">
+                <h3 class="square-title">A PROPOS</h3>
+            </div>
+        </div>
+        <div class="about-text-div" data-aos="fade-left" data-aos-duration="2000">
+            <p>Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Fusce egestas elit eget lorem. Fusce neque. Phasellus blandit leo ut odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Praesent ac sem eget est egestas volutpat. Fusce ac felis sit amet ligula pharetra condimentum. Morbi mattis ullamcorper velit. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed aliquam ultrices mauris.</p>
+        </div>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/portfolio/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/portfolio/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="skills-div section">
+    </div>
+
+    <div class="portfolio-div section">
+    </div>
+
+    <div class="contact-div section">
+    </div>
+
 {% endblock %}

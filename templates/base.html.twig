@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="Charlotte SAURY, développeuse, web, Morbihan, PHP, Symfony, Vannes, Morbihan">
+		<meta name="description" content="Charlotte SAURY, développeuse web PHP/Symfony junior dans le Morbihan, à l'écoute d'opportunités"> {% block meta %}{% endblock %}
+
+		<title>
+			{% block title %}Charlotte SAURY
+			{% endblock %}
+		</title>
+
+		{% block stylesheets %}
+			<link
+			rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
+			<!-- fonts -->
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link
+			href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Heebo:wght@100;300&family=Finger+Paint&display=swap" rel="stylesheet">
+
+			<!-- animate.css -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+			<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+		{% endblock %}
+	</head>
+	<body>
+		<nav class="nav">
+			<a class="logo" href="{{ path('home') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"/></a>
+			<div class="top-nav">
+				<a href="{{ path('home') }}">Accueil</a>
+				<a href="#">A propos</a>
+				<a href="#">Réalisations</a>
+				<a href="#">Parcours</a>
+				<a href="#">Contact</a>
+			</div>
+		</nav>
+
+		{% block body %}{% endblock %}
+
+		<footer>
+			<div class="footer-networks">
+				<a href="" target="_blank"></a>
+				<a href="" target="_blank"></a>
+				<a href="" target="_blank">
+					<i class="fab fa-github"></i>
+				</a>
+			</div>
+		</footer>
+
+		{% block javascripts %}
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<script>
+				AOS.init();
+			</script>
+
+		{% endblock %}
+	</body>
 </html>
