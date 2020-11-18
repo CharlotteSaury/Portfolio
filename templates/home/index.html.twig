@@ -1,41 +1,137 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Charlotte SAURY{% endblock %}
+{% block title %}Charlotte SAURY
+{% endblock %}
 
 {% block body %}
-    <div class="home-header">
-        <div class="home-title-div">
-            <h1>Charlotte Saury</h1>
-            <h2>Développeuse Web PHP/Symfony</h2>
-            <h5>A l'écoute d'opportunités sur la région de Vannes</h5>
-            <div class="home-header-btn">
-                <button type="button" data-aos="zoom-in" data-aos-duration="1000">Me contacter</button>
-                <button type="button" data-aos="zoom-in" data-aos-duration="1000">Mon CV</button>
-            </div>
-        </div>
-        <div class="home-design-div">
-            <img src="{{ asset('images/home.jpg') }}" alt="web development picture" />
-        </div>
+	<div class="home-header">
+		<div class="home-title-div">
+			<h1>Charlotte Saury</h1>
+			<h2>Développeuse Web PHP/Symfony</h2>
+			<h5>A l'écoute d'opportunités sur la région de Vannes</h5>
+			<div class="home-header-btn">
+				<button type="button">Me contacter</button>
+				<button type="button">Mon CV</button>
+			</div>
+		</div>
+		<div class="home-design-div">
+			<img src="{{ asset('images/home.jpg') }}" alt="web development picture"/>
+		</div>
+	</div>
+
+	<div class="header-after-section"></div>
+
+	<div class="about-div section" id="aboutDiv">
+		<div class="square-div" data-aos="fade-right" data-aos-duration="2000">
+			<div class="square">
+				<h3 class="square-title">A PROPOS</h3>
+			</div>
+		</div>
+		<div class="about-text-div" data-aos="fade-left" data-aos-duration="2000">
+			<p>Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Fusce egestas elit eget lorem. Fusce neque. Phasellus blandit leo ut odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Praesent ac sem eget est egestas volutpat. Fusce ac felis sit amet ligula pharetra condimentum. Morbi mattis ullamcorper velit. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed aliquam ultrices mauris.</p>
+		</div>
+	</div>
+	<div class="about-after-section"></div>
+
+	<div class="skills-div section">
+		<div class="div-section-title">
+			<h3>Mes compétences</h3>
+			<p>Compétences acquises durant mon parcours de formation OpenClassrooms et sur des projets annexes. Je reste en veille sur ces technologies pour continuer à monter en compétences!</p>
+		</div>
+
+		<div class="skills-div-skills">
+			<div class="language-div skills-card-div">
+				<div class="skills-card-title">
+					<h4>Languages</h4>
+				</div>
+				<div class="skills-card-content">
+					<div class="skills-card-content-text"></div>
+					<div class="skills-card-content-logo">
+						{% for techno in technos %}
+							{% if techno.type == 'language' %}
+								<div class="techno-card">
+									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									<div class="techno-level">
+										{% for i in 1..techno.level %}
+											<div class="skills-plain-level"></div>
+										{% endfor %}
+										{% for i in (techno.level + 1)..5 %}
+											<div class="skills-empty-level"></div>
+										{% endfor %}
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+
+				</div>
+			</div>
+			<div class="framework-div skills-card-div">
+				<div class="skills-card-title">
+					<h4>Frameworks</h4>
+				</div>
+				<div class="skills-card-content">
+					<div class="skills-card-content-text"></div>
+					<div class="skills-card-content-logo">
+						{% for techno in technos %}
+							{% if techno.type == 'framework' %}
+								<div class="techno-card">
+									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									<div class="techno-level">
+										{% for i in 1..techno.level %}
+											<div class="skills-plain-level"></div>
+										{% endfor %}
+										{% for i in (techno.level + 1)..5 %}
+											<div class="skills-empty-level"></div>
+										{% endfor %}
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+
+				</div>
+			</div>
+			<div class="tools-div skills-card-div">
+				<div class="skills-card-title">
+					<h4>Outils</h4>
+				</div>
+				<div class="skills-card-content">
+					<div class="skills-card-content-text"></div>
+					<div class="skills-card-content-logo">
+						{% for techno in technos %}
+							{% if techno.type == 'tools' %}
+								<div class="techno-card">
+									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									<div class="techno-level">
+										{% for i in 1..techno.level %}
+											<div class="skills-plain-level"></div>
+										{% endfor %}
+										{% for i in (techno.level + 1)..5 %}
+											<div class="skills-empty-level"></div>
+										{% endfor %}
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+    <div class="skills-after-section"></div>
+
+	<div class="portfolio-div section">
+        <div class="div-section-title">
+			<h3>Mes réalisations</h3>
+			<p>Réalisés dans le cadre de ma formation ou à des fins personnelles, je vous invite à parcourir les différents projets que j'ai réalisé.</p>
+		</div>
     </div>
 
-    <div class="about-div section" id="aboutDiv">
-        <div class="square-div" data-aos="fade-right" data-aos-duration="2000">
-            <div class="square">
-                <h3 class="square-title">A PROPOS</h3>
-            </div>
-        </div>
-        <div class="about-text-div" data-aos="fade-left" data-aos-duration="2000">
-            <p>Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Fusce egestas elit eget lorem. Fusce neque. Phasellus blandit leo ut odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Praesent ac sem eget est egestas volutpat. Fusce ac felis sit amet ligula pharetra condimentum. Morbi mattis ullamcorper velit. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed aliquam ultrices mauris.</p>
-        </div>
-    </div>
-
-    <div class="skills-div section">
-    </div>
-
-    <div class="portfolio-div section">
-    </div>
-
-    <div class="contact-div section">
-    </div>
+	<div class="contact-div section"></div>
 
 {% endblock %}

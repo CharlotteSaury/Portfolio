@@ -16,9 +16,15 @@ body {
 }
 
 
-h1, h2, .logo {
+h1, h2, h3, .logo {
     font-family: 'Finger Paint', cursive;
     text-transform: uppercase;
+}
+
+h3 {
+    font-size: 32px;
+    color: #edc990;
+    font-weight: bold;
 }
 
 h5 {
@@ -130,6 +136,13 @@ footer {
     max-width: 100%;
 }
 
+.header-after-section {
+    border-top: 50px solid white;
+    border-left: 50vw solid whitesmoke;
+    border-bottom: 50px solid whitesmoke;
+    border-right: 50vw solid white;
+}
+
 /* ****** ABOUT **********/
 
 .about-div {
@@ -171,6 +184,7 @@ footer {
     bottom: -65px;
     left: 60px;
     margin: 0px;
+    font-family: 'Heebo', sans-serif;
 }
 
 .about-text-div {
@@ -178,3 +192,129 @@ footer {
     margin-left: 50px;
     padding-top: 25px;
 }
+
+.about-after-section {
+    border-top: 50px solid whitesmoke;
+    border-left: 50vw solid whitesmoke;
+    border-bottom: 50px solid white;
+    border-right: 50vw solid white;
+}
+
+/* ****** SKILLS **********/
+
+.skills-div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.div-section-title p {
+    width: 80%;
+    margin: auto;
+}
+
+.skills-div-skills {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.skills-card-div {
+    min-width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.skills-card-div .skills-card-title {
+    background-color: #EDC990;
+    display: inline-block;
+    padding: 15px 25px;
+    position: relative;
+    bottom: -30px;
+}
+
+.skills-card-div .skills-card-title:before {
+    content: "";
+    height: 66px;
+    width: 100%;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: hsla(330, 5%, 8%, 0.624);
+}
+
+.skills-card-div .skills-card-title h4 {
+    color: #EDC990;
+    z-index: 100;
+    position: relative;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 22px;
+    bottom: -13px;
+}
+
+.skills-card-div .skills-card-content {
+    background-color: whitesmoke;
+    padding: 50px 15px 30px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-card-div .skills-card-content .skills-card-content-logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-card-div .skills-card-content .techno-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-card-div .skills-card-content .techno-card img {
+    margin-right: 20px;
+}
+
+.skills-card-div .skills-card-content .techno-level {
+    display: flex;
+}
+
+.skills-plain-level {
+    background-color: #edc990;
+}
+
+.skills-empty-level {
+    background-color: white;
+}
+
+.skills-plain-level, .skills-empty-level {
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.skills-card-content-logo {
+    width: 80%;
+}
+
+.skills-after-section {
+    border-top: 50px solid white;
+    border-left: 50vw solid white;
+    border-bottom: 50px solid whitesmoke;
+    border-right: 50vw solid whitesmoke;
+}
+
+
