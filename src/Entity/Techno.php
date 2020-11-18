@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\TechnoRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,16 @@ class Techno
      * @ORM\Column(type="string", length=255)
      */
     private $type;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Realization::class, mappedBy="technos")
+     */
+    private $realizations;
+
+    public function __construct()
+    {
+        $this->realizations = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -86,6 +98,33 @@ class Techno
     public function setType(string $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Realization[]
+     */
+    public function getRealizations(): Collection
+    {
+        return $this->realizations;
+    }
+
+    public function addRealization(Realization $realization): self
+    {
+        if (!$this->realizations->contains($realization)) {
+            $this->realizations[] = $realization;
+            $realization->addTechno($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRealization(Realization $realization): self
+    {
+        if ($this->realizations->removeElement($realization)) {
+            $realization->removeTechno($this);
+        }
 
         return $this;
     }
