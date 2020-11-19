@@ -500,6 +500,13 @@ footer {
     width: auto;
 }
 
+.portfolio-after-section {
+    border-top: 50px solid whitesmoke;
+    border-left: 48vw solid white;
+    border-bottom: 50px solid white;
+    border-right: 50vw solid whitesmoke;
+}
+
 
 /**************************/
 /* ****** PORTFOLIO PAGE ********/
