@@ -15,10 +15,10 @@ class RealizationFixtures extends Fixture implements DependentFixtureInterface
     {
         $faker = \Faker\Factory::create('fr_FR');
         $images = [
-            'snowtricks.jpg',
-            'bilemo.jpg',
-            'blog.jpg',
-            'chalets.jpg'
+            'snowtricks.JPG',
+            'bilemo.JPG',
+            'blog.JPG',
+            'chalets.JPG'
         ];
 
         for ($i = 0; $i < 8; $i++) {

@@ -31,7 +31,8 @@ h5 {
     font-size: 1rem;
 }
 
-button {
+.custom-btn {
+    text-decoration: none;
     width: 165px;
     height: 37px;
     justify-content: center;
@@ -48,7 +49,7 @@ button {
     transition: transform 0.2s;
 }
 
-button:hover {
+.custom-btn:hover {
     transform: scale(1.1);
     transition: transform 0.2s;
     background-color: #a03555;
@@ -319,4 +320,127 @@ footer {
 
 /* ****** PORTFOLIO **********/
 
+.portfolio-div {
+    justify-content: center;
+    background-color: whitesmoke;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-div-realizations {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 10px;
+    display: inline-grid;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.realization-card {
+    position: relative;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 200;
+}
+
+.mozaic-1, .mozaic-1:before {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.mozaic-2, .mozaic-2:before {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.mozaic-3, .mozaic-3:before {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+.mozaic-4, .mozaic-4:before {
+    grid-column: 3 / 5;
+    grid-row: 2 / 4;
+}
+
+.mozaic-5, .mozaic-5:before {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.realization-card:before {
+    display: block;
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.realization-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+.realization-card:hover:before {
+    opacity: 0.9;
+}
+
+.realization-card .realization-infos {
+    opacity: 0;
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+}
+
+.realization-card:hover .realization-infos {
+    opacity: 1;
+}
+
+.realization-card .realization-techno {
+    margin-bottom: 30px;
+}
+
+.realization-card .realization-techno span {
+    position: absolute;
+    bottom: 28px;
+    font-weight: bold;
+    z-index: 2000;
+    color: #fff;
+    background-color: black;
+    opacity: 0.9;
+    padding: 0px 5px;
+}
+
+.realization-card .realization-techno p {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 11px;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.realization-card .realization-infos i {
+    color: white;
+    font-size: 28px;
+    margin: 5px;
+}
+
+.portfolio-div .custom-btn {
+    height: 24px;
+    width: auto;
+}
 

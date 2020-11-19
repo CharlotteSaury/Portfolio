@@ -33,7 +33,7 @@ class TechnoFixtures extends Fixture
             $techno->setTitle($faker->word)
                 ->setImage($images[$i])
                 ->setType($types[mt_rand(0,2)])
-                ->setLevel(mt_rand(0, 5));
+                ->setLevel(mt_rand(2, 5));
             
 
             $manager->persist($techno);

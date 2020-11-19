@@ -13,7 +13,7 @@ class TechnoManager
         $this->technoRepository = $technoRepository;
     }
 
-    public function allTechno()
+    public function findAll()
     {
         return $this->technoRepository->findAll();
     }

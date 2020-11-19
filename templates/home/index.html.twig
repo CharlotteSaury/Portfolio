@@ -10,8 +10,8 @@
 			<h2>Développeuse Web PHP/Symfony</h2>
 			<h5>A l'écoute d'opportunités sur la région de Vannes</h5>
 			<div class="home-header-btn">
-				<button type="button">Me contacter</button>
-				<button type="button">Mon CV</button>
+				<a href="" class="custom-btn">Me contacter</a>
+				<button type="button" class="custom-btn">Mon CV</button>
 			</div>
 		</div>
 		<div class="home-design-div">
@@ -55,9 +55,11 @@
 										{% for i in 1..techno.level %}
 											<div class="skills-plain-level"></div>
 										{% endfor %}
-										{% for i in (techno.level + 1)..5 %}
-											<div class="skills-empty-level"></div>
-										{% endfor %}
+										{% if techno.level != 5 %}
+											{% for i in (techno.level + 1)..5 %}
+												<div class="skills-empty-level"></div>
+											{% endfor %}
+										{% endif %}
 									</div>
 								</div>
 							{% endif %}
@@ -81,9 +83,11 @@
 										{% for i in 1..techno.level %}
 											<div class="skills-plain-level"></div>
 										{% endfor %}
-										{% for i in (techno.level + 1)..5 %}
-											<div class="skills-empty-level"></div>
-										{% endfor %}
+										{% if techno.level != 5 %}
+											{% for i in (techno.level + 1)..5 %}
+												<div class="skills-empty-level"></div>
+											{% endfor %}
+										{% endif %}
 									</div>
 								</div>
 							{% endif %}
@@ -100,16 +104,18 @@
 					<div class="skills-card-content-text"></div>
 					<div class="skills-card-content-logo">
 						{% for techno in technos %}
-							{% if techno.type == 'tools' %}
+							{% if techno.type == 'tool' %}
 								<div class="techno-card">
 									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
 									<div class="techno-level">
 										{% for i in 1..techno.level %}
 											<div class="skills-plain-level"></div>
 										{% endfor %}
-										{% for i in (techno.level + 1)..5 %}
-											<div class="skills-empty-level"></div>
-										{% endfor %}
+										{% if techno.level != 5 %}
+											{% for i in (techno.level + 1)..5 %}
+												<div class="skills-empty-level"></div>
+											{% endfor %}
+										{% endif %}
 									</div>
 								</div>
 							{% endif %}
@@ -123,14 +129,39 @@
 
 	</div>
 
-    <div class="skills-after-section"></div>
+	<div class="skills-after-section"></div>
 
 	<div class="portfolio-div section">
-        <div class="div-section-title">
-			<h3>Mes réalisations</h3>
-			<p>Réalisés dans le cadre de ma formation ou à des fins personnelles, je vous invite à parcourir les différents projets que j'ai réalisé.</p>
+		<div class="div-section-title">
+			<h3>Mes dernières réalisations</h3>
+			<p>Réalisés dans le cadre de ma formation ou à des fins personnelles, je vous invite à parcourir les différents projets que j'ai réalisés.</p>
 		</div>
-    </div>
+		<div class="portfolio-div-realizations">
+			{% for realization in realizations %}
+				<div class="realization-card mozaic-{{ loop.index }}" style="background: url('{{ asset('images/realization/' ~ realization.image ) }}') no-repeat center; background-size: cover;">
+					<div class="realization-infos">
+						<div class="realization-techno">
+							<p>
+							<span class="realization-techno-title">Un site en</span>
+							{% for techno in realization.technos %}
+								{{ techno.title }}
+								{% if loop.index != realization.technos|length %},{% endif %}
+							{% endfor %}
+							</p>
+						</div>
+						<a href="#" title="Plus d'infos"><i class="fas fa-search-plus"></i></a>
+						{% if realization.url %}
+							<a href="#" title="Voir le site"><i class="far fa-eye"></i></a>
+						{% endif %}
+						{% if realization.github %}
+							<a href="#" title="Voir le repository"><i class="fab fa-github"></i></i></a>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<a href="#" class="custom-btn">Voir toutes les réalisations</a>
+	</div>
 
 	<div class="contact-div section"></div>
 
