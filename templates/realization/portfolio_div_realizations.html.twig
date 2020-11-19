@@ -12,7 +12,7 @@
 								{% endfor %}
 							</p>
 						</div>
-						<a href="#" title="Plus d'infos">
+						<a href="{{ path('realization.show', {id: realization.id, slug: realization.slug}) }}" title="Plus d'infos">
 							<i class="fas fa-search-plus"></i>
 						</a>
 						{% if realization.url %}

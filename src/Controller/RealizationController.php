@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Realization;
 use App\Manager\TechnoManager;
 use App\Manager\RealizationManager;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,7 +22,7 @@ class RealizationController extends AbstractController
     }
 
     /**
-     * @Route("/portfolio", name="portfolio")
+     * @Route("/portfolio", name="realization.index")
      */
     public function index(): Response
     {
@@ -29,6 +30,21 @@ class RealizationController extends AbstractController
         
         return $this->render('realization/index.html.twig', [
             'realizations' => $realizations,
+        ]);
+    }
+
+    /**
+     * @Route("/realisation/{id}/{slug}", name="realization.show")
+     */
+    public function show(Realization $realization): Response
+    {
+        $previousRealization = $this->realizationManager->getPrevious($realization);
+        $nextRealization = $this->realizationManager->getNext($realization);
+
+        return $this->render('realization/show.html.twig', [
+            'realization' => $realization,
+            'previous' => $previousRealization,
+            'next' => $nextRealization,
         ]);
     }
 }

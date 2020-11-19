@@ -210,4 +210,9 @@ class Realization
 
         return $this;
     }
+
+    public function getSlug(): ?string
+    {
+        return mb_strtolower(str_replace(' ', '_', $this->title));
+    }
 }

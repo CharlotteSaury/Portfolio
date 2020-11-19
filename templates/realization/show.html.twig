@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon portfolio
+{% endblock %}
+
+{% block body %}
+	<div class="page-header">
+		<h2>{{ realization.title }}</h2>
+		<a class="custom-link" href="{{ path('realization.index') }}">
+			<i class="fas fa-th"></i>
+			Retour au portfolio
+		</a>
+	</div>
+	<div class="page-header-after"></div>
+
+	<div class="page-content section page-content-show">
+		<div class="realization-gallery-div">
+			<img src="{{ asset('images/realization/' ~ realization.image) }}" alt="Page d'accueil du site {{ realization.title }}"/>
+		</div>
+		<div class="realization-show-links-div">
+			{% if realization.url %}
+				<a class="custom-btn" href="{{ realization.url }}" target="_hblank">
+					<i class="far fa-eye"></i>Voir le site
+				</a>
+			{% endif %}
+			{% if realization.github %}
+				<a class="custom-btn" href="{{ realization.github }}" target="_hblank">
+					<i class="fab fa-github"></i>Repo GitHub
+				</a>
+			{% endif %}
+			{% if realization.github %}
+				<a class="custom-btn" href="{{ realization.github }}" target="_hblank">
+					<i class="fab fa-youtube"></i>Soutenance
+				</a>
+			{% endif %}
+		</div>
+		<div class="realization-description-div">
+			<p>{{ realization.shortDesc }}</p>
+			<h4>Contexte</h4>
+			<p>{{ realization.context }}</p>
+			<h4>Technologies</h4>
+			{% for techno in realization.technos %}
+				<img src="{{ asset('images/techno/' ~ techno.image ) }}" width="50" height="50" alt="{{ techno.title }} logo"/>
+			{% endfor %}
+			<h4>Description</h4>
+			<p>{{ realization.description }}</p>
+		</div>
+
+		<div class="other-realizations-links">
+			{% if previous is defined and previous is not null %}
+				<a class="custom-link" href="{{ path('realization.show', {id: previous.id, slug: previous.slug}) }}">
+					<i class="fas fa-arrow-left"></i>
+					Réalisation précédente :
+					{{ previous.title }}
+				</a>
+			{% else %}
+				<div></div>
+			{% endif %}
+
+			{% if next is defined and next is not null %}
+				<a class="custom-link" href="{{ path('realization.show', {id: next.id, slug: next.slug}) }}">
+					Réalisation suivante :
+					{{ next.title }}
+					<i class="fas fa-arrow-right"></i>
+				</a>
+			{% else %}
+				<div></div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
