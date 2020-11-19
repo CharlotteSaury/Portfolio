@@ -125,8 +125,6 @@
 				</div>
 			</div>
 		</div>
-
-
 	</div>
 
 	<div class="skills-after-section"></div>
@@ -136,31 +134,10 @@
 			<h3>Mes dernières réalisations</h3>
 			<p>Réalisés dans le cadre de ma formation ou à des fins personnelles, je vous invite à parcourir les différents projets que j'ai réalisés.</p>
 		</div>
-		<div class="portfolio-div-realizations">
-			{% for realization in realizations %}
-				<div class="realization-card mozaic-{{ loop.index }}" style="background: url('{{ asset('images/realization/' ~ realization.image ) }}') no-repeat center; background-size: cover;">
-					<div class="realization-infos">
-						<div class="realization-techno">
-							<p>
-							<span class="realization-techno-title">Un site en</span>
-							{% for techno in realization.technos %}
-								{{ techno.title }}
-								{% if loop.index != realization.technos|length %},{% endif %}
-							{% endfor %}
-							</p>
-						</div>
-						<a href="#" title="Plus d'infos"><i class="fas fa-search-plus"></i></a>
-						{% if realization.url %}
-							<a href="#" title="Voir le site"><i class="far fa-eye"></i></a>
-						{% endif %}
-						{% if realization.github %}
-							<a href="#" title="Voir le repository"><i class="fab fa-github"></i></i></a>
-						{% endif %}
-					</div>
-				</div>
-			{% endfor %}
-		</div>
-		<a href="#" class="custom-btn">Voir toutes les réalisations</a>
+		{% include "realization/portfolio_div_realizations.html.twig" %}
+
+
+		<a href="{{ path('portfolio') }}" class="custom-btn">Voir toutes les réalisations</a>
 	</div>
 
 	<div class="contact-div section"></div>

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon portfolio
+{% endblock %}
+
+{% block body %}
+	<div class="page-header">
+		<h2>Mes réalisations</h2>
+	</div>
+	<div class="page-header-after"></div>
+	<div class="page-description section">
+		<p>Retrouvez l'ensemble de mes réalisations comprenant des projets personnels et des projets réalisés dans le cadre de ma formation "Développeur d'application PHP/Symfony" réalisé avec OpenClassrooms.</p>
+	</div>
+
+	<div class="page-content section">
+		{% include "realization/portfolio_div_realizations.html.twig" %}
+	</div>
+
+
+{% endblock %}

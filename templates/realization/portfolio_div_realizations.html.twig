@@ -1,0 +1,31 @@
+<div class="portfolio-div-realizations">
+			{% for realization in realizations %}
+				<div class="realization-card {% if mozaic is defined and mozaic == true %} mozaic-{{ loop.index }}{% endif %}" style="background: url('{{ asset('images/realization/' ~ realization.image ) }}') no-repeat center; background-size: cover;">
+					<div class="realization-infos">
+						<div class="realization-techno">
+							<p>
+								<span class="realization-techno-title">Un site en</span>
+								{% for techno in realization.technos %}
+									{{ techno.title }}
+									{% if loop.index != realization.technos|length %},
+									{% endif %}
+								{% endfor %}
+							</p>
+						</div>
+						<a href="#" title="Plus d'infos">
+							<i class="fas fa-search-plus"></i>
+						</a>
+						{% if realization.url %}
+							<a href="{{ realization.url }}" target="_hblank" title="Voir le site">
+								<i class="far fa-eye"></i>
+							</a>
+						{% endif %}
+						{% if realization.github %}
+							<a href="{{ realization.github }}" target="_hblank" title="Voir le repository">
+								<i class="fab fa-github"></i>
+							</a>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>

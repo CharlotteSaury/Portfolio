@@ -60,6 +60,43 @@ h5 {
     padding-right: 110px;
 }
 
+.page-header {
+    background-color: rgba(160, 53, 85, 0.7);
+    height: 50px;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    position: relative;
+}
+
+.page-header-after {
+    border-top: 75px solid  rgba(160, 53, 85, 0.7);
+    border-left: 48vw solid rgba(160, 53, 85, 0.7);
+    border-bottom: 75px solid transparent;
+    border-right: 50vw solid transparent;
+    margin-bottom: 75px;
+    position: relative;
+}
+
+.page-header:after {
+    content: "";
+    height: 176px;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -100;
+}
+
+.page-description {
+    text-align: center;
+}
+
+.page-content {
+    padding: 60px;
+}
+
 /* ****** NAV ********/
 
 .nav {
@@ -139,8 +176,8 @@ footer {
 
 .header-after-section {
     border-top: 50px solid white;
-    border-left: 50vw solid whitesmoke;
-    border-bottom: 50px solid whitesmoke;
+    border-left: 48vw solid whitesmoke;
+    border-bottom: 48px solid whitesmoke;
     border-right: 50vw solid white;
 }
 
@@ -198,7 +235,7 @@ footer {
     border-top: 50px solid whitesmoke;
     border-left: 50vw solid whitesmoke;
     border-bottom: 50px solid white;
-    border-right: 50vw solid white;
+    border-right: 48vw solid white;
 }
 
 /* ****** SKILLS **********/
@@ -313,7 +350,7 @@ footer {
 
 .skills-after-section {
     border-top: 50px solid white;
-    border-left: 50vw solid white;
+    border-left: 48vw solid white;
     border-bottom: 50px solid whitesmoke;
     border-right: 50vw solid whitesmoke;
 }
@@ -335,8 +372,7 @@ footer {
     grid-auto-rows: minmax(200px, auto);
     grid-gap: 10px;
     display: inline-grid;
-    width: 90%;
-    margin: auto;
+    width: 100%;
     margin-bottom: 50px;
 }
 
@@ -392,7 +428,7 @@ footer {
 
 .realization-card:hover {
     transform: scale(1.02);
-    transition: transform 0.2s;
+    transition: transform 0.1s;
 }
 
 .realization-card:hover:before {
@@ -416,7 +452,7 @@ footer {
 
 .realization-card .realization-techno span {
     position: absolute;
-    bottom: 28px;
+    top: -8px;
     font-weight: bold;
     z-index: 2000;
     color: #fff;
@@ -433,14 +469,20 @@ footer {
     padding: 10px;
 }
 
-.realization-card .realization-infos i {
+.realization-card .realization-infos a {
     color: white;
     font-size: 28px;
     margin: 5px;
+    text-decoration: none;
 }
 
 .portfolio-div .custom-btn {
     height: 24px;
     width: auto;
 }
+
+
+/**************************/
+/* ****** PORTFOLIO PAGE ********/
+/**************************/
 

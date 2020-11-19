@@ -13,6 +13,11 @@ class RealizationManager
         $this->realizationRepository = $realizationRepository;
     }
 
+    public function findAll()
+    {
+        return $this->realizationRepository->findBy(array(), array('createdAt' => 'DESC'));
+    }
+
     public function findLast(int $number)
     {
         return $this->realizationRepository->findBy(array(), array('createdAt' => 'DESC'), $number);
