@@ -7,27 +7,22 @@
 	<div class="home-header">
 		<div class="home-title-div">
 			<h1>Charlotte Saury</h1>
-			<h2>Développeuse Web PHP/Symfony</h2>
-			<h5>A l'écoute d'opportunités sur la région de Vannes</h5>
+			<h2>Développeuse Web PHP/Symfony à l'écoute d'opportunités sur la région de Vannes</h2>
 			<div class="home-header-btn">
-				<a href="" class="custom-btn">Me contacter</a>
-				<button type="button" class="custom-btn">Mon CV</button>
+				<a href="#contactForm" class="custom-btn">Me contacter</a>
+				<a href="{{ asset('pdf/cv_saury.pdf') }}"  download="cv_saury.pdf" class="custom-btn">Mon CV</a>
 			</div>
-		</div>
-		<div class="home-design-div">
-			<img src="{{ asset('images/home.jpg') }}" alt="web development picture"/>
 		</div>
 	</div>
 
 	<div class="header-after-section"></div>
 
 	<div class="about-div section" id="aboutSection">
-		<div class="square-div" data-aos="fade-right" data-aos-duration="2000">
-			<div class="square">
-				<h3 class="square-title">A PROPOS</h3>
-			</div>
+		<div class="photo-div" data-aos="fade-right" data-aos-duration="2000">
+			<div class="photo"></div>
 		</div>
 		<div class="about-text-div" data-aos="fade-left" data-aos-duration="2000">
+			<h3 class="photo-title">A propos</h3>
 			<p>Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Fusce egestas elit eget lorem. Fusce neque. Phasellus blandit leo ut odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Praesent ac sem eget est egestas volutpat. Fusce ac felis sit amet ligula pharetra condimentum. Morbi mattis ullamcorper velit. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed aliquam ultrices mauris.</p>
 		</div>
 	</div>

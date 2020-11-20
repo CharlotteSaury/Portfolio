@@ -16,13 +16,17 @@ body {
 }
 
 
-h1, h2, h3, .logo {
-    font-family: 'Finger Paint', cursive;
-    text-transform: uppercase;
+h1, h2, h3 {
+    font-family: 'Lobster', cursive;
+}
+
+h2 {
+    margin-bottom: 70px;
+    font-weight: 100;
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 40px;
     color: #edc990;
     font-weight: bold;
 }
@@ -34,8 +38,7 @@ h5 {
 .custom-btn {
     text-decoration: none;
     width: 165px;
-    height: 37px;
-    justify-content: center;
+    text-align: center;
     padding: 10px 20px;
     background-color: #bc4167;
     color: white;
@@ -76,6 +79,7 @@ h5 {
     text-align: center;
     padding-top: 50px;
     position: relative;
+    border-top: 67px solid whitesmoke;
 }
 
 .page-header-after {
@@ -102,6 +106,10 @@ h5 {
     color: white;
     position: relative;
     z-index: 1000;
+}
+
+.page-header h2 {
+    margin-bottom: 30px;
 }
 
 .page-header .custom-link:hover {
@@ -131,12 +139,15 @@ h5 {
 /* ****** NAV ********/
 
 .nav {
-    background-color: whitesmoke;
-    padding: 10px 25px;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    box-sizing: border-box;
+    padding: 5px 20px;
 }
 
 .nav a {
@@ -144,20 +155,50 @@ h5 {
     text-transform: uppercase;
     color: brown;
     margin: 0 10px;
+    font-weight: bold;
 }
 
 .nav .logo img {
     height: 50px;
 }
 
+.scrolled {
+    background-color: whitesmoke;
+    box-shadow: 0px -4px 10px 0px;
+}
+
 /* ****** FOOTER ********/
+.footer-before-section {
+    border-top: 50px solid white;
+    border-left: 49vw solid white;
+    border-bottom: 50px solid rgba(188, 65, 103, 0.7);
+    border-right: 49vw solid white;
+}
 
 footer {
     height: 75px;
     width: 100%;
-    background-color: black;
+    background-color: rgba(188, 65, 103, 0.7);
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
     
 }
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-networks a {
+    font-size: 26px;
+    margin: 10px;
+}
+
+.footer-mentions p {
+    font-size: 12px;
+}
+
 
 /**************************/
 /* ****** HOMEPAGE ********/
@@ -166,43 +207,35 @@ footer {
 /* ****** HEADER **********/
 
 .home-header {
-    height: 92vh;
-    display: flex;
+    height: 100vh;
     align-items: center;
     padding: 0 20px 0 50px;
+    background: url('../images/home2.jpg') no-repeat;
+    background-size: 55%;
+    background-position: right;
+    display: flex;
 }
 
 .home-title-div {
-    min-width: 40%;
+    max-width: 40%;
+    position: relative;
+    text-align: center;
 }
 
 .home-title-div h1 {
     position: relative;
-    font-size: 45px;
-    margin-bottom: 65px;
-}
-
-.home-title-div h1:after {
-    content: "";
-    width: 250px;
-    height: 6px;
-    background: linear-gradient(to right, #bc4167, #edc990);
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    border-radius: 2px;
+    font-size: 55px;
+    margin-bottom: 30px;
+    color: #a03555;
 }
 
 .home-header-btn {
     display: flex;
+    justify-content: center
 }
 
 .home-header-btn button {
     display: flex;
-}
-
-.home-design-div img {
-    max-width: 100%;
 }
 
 .header-after-section {
@@ -222,38 +255,30 @@ footer {
     background-color: whitesmoke;
 }
 
-.square-div {
+.photo-div {
     min-width: 300px;
     position: relative;
 }
 
-.square {
-    background-color: #a03555;
+.photo {
+    background: url('../images/photo.jpg');
+    background-size: 100%;
     position: relative;
-    height: 250px;
+    height: 300px;
     width: 250px;
+    border-radius: 10%;
 }
 
-.square:before {
+.photo:before {
     background-color: hsla(330, 5%, 8%, 0.624);
     content: "";
     position: absolute;
-    top: 50px;
-    left: 50px;
-    height: 250px;
+    top: 40px;
+    left: 40px;
+    height: 300px;
     width: 250px;
-}
-
-.square-title {
-    color: white;
-    text-transform: uppercase;
-    font-size: 38px;
-    font-weight: bold;
-    position: absolute;
-    bottom: -65px;
-    left: 60px;
-    margin: 0px;
-    font-family: 'Heebo', sans-serif;
+    border-radius: 10%;
+    z-index: -1;
 }
 
 .about-text-div {
@@ -309,6 +334,7 @@ footer {
     padding: 15px 25px;
     position: relative;
     bottom: -30px;
+    border-radius: 50px;
 }
 
 .skills-card-div .skills-card-title:before {
@@ -316,9 +342,10 @@ footer {
     height: 66px;
     width: 100%;
     position: absolute;
-    bottom: 12px;
-    left: 12px;
+    bottom: 10px;
+    left: 10px;
     background-color: hsla(330, 5%, 8%, 0.624);
+    border-radius: 50px;
 }
 
 .skills-card-div .skills-card-title h4 {
@@ -328,7 +355,6 @@ footer {
     text-transform: uppercase;
     margin: 0;
     font-size: 22px;
-    bottom: -13px;
 }
 
 .skills-card-div .skills-card-content {
@@ -523,7 +549,7 @@ footer {
 
 .contact-div {
     padding-top: 75px;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
     text-align: center;
 }
 
