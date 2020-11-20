@@ -116,6 +116,18 @@ h5 {
     padding: 60px;
 }
 
+.alert-success {
+    padding: 15px;
+    background-color:  #edc990;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.alert-success i {
+    margin-right: 10px;
+}
+
 /* ****** NAV ********/
 
 .nav {
@@ -505,6 +517,50 @@ footer {
     border-left: 48vw solid white;
     border-bottom: 50px solid white;
     border-right: 50vw solid whitesmoke;
+}
+
+/* ****** CONTACT FORM **********/
+
+.contact-div {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+}
+
+.contact-infos {
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    justify-content: space-around;
+}
+
+.contact-infos i {
+    margin-right: 10px;
+}
+
+.contact-form-input {
+    display: flex;
+}
+
+.contact-form-name, .contact-form-message {
+    width: 50%;
+}
+
+.contact-form input, .contact-form textarea {
+    background-color: whitesmoke;
+    border: none;
+    width: 85%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form-submit {
+    margin-top: 25px;
+}
+
+.contact-form input:hover, .contact-form input:focus, .contact-form textarea:hover, .contact-form textarea:focus {
+    background-color: rgba(160, 53, 85, 0.2);
 }
 
 

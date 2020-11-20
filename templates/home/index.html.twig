@@ -21,7 +21,7 @@
 
 	<div class="header-after-section"></div>
 
-	<div class="about-div section" id="aboutDiv">
+	<div class="about-div section" id="aboutSection">
 		<div class="square-div" data-aos="fade-right" data-aos-duration="2000">
 			<div class="square">
 				<h3 class="square-title">A PROPOS</h3>
@@ -129,7 +129,7 @@
 
 	<div class="skills-after-section"></div>
 
-	<div class="portfolio-div section">
+	<div class="portfolio-div section" id="porfolioSection">
 		<div class="div-section-title">
 			<h3>Mes dernières réalisations</h3>
 			<p>Réalisés dans le cadre de ma formation ou à des fins personnelles, je vous invite à parcourir les différents projets que j'ai réalisés.</p>
@@ -142,9 +142,41 @@
 
 	<div class="portfolio-after-section"></div>
 
-	<div class="contact-div section">
-	
-	
+	<div class="contact-div section" id="contactForm">
+		<h3>Me contacter</h3>
+		<p>C'est avec plaisir que j'échangerai avec vous pour discuter plus en détails de mon parcours, de mes compétences et de ma motivation. N'hésitez pas à me contacter par téléphone, par mail, via mon profil <a class="custom-link" href="https://www.linkedin.com/in/charlottesaury">LinkedIn</a> ou encore grâce au formulaire de contact ci-dessous.</p>
+		{% for message in app.flashes('success') %}
+			<div class="alert-success">
+				<i class="fas fa-check"></i>{{ message }}
+			</div>
+		{% endfor %}
+		<div class="contact-infos">
+			<a class="custom-link" href="tel:+33 (0)6 48 08 35 40"><i class="fas fa-phone-square"></i>06 48 08 35 40</a>
+			<a class="custom-link" href="mailto:saury.charlotte@wanadoo.fr"><i class="fas fa-envelope"></i>saury.charlotte@wanadoo.fr</a>
+			<a class="custom-link" target="_hblank" href="https://www.google.com/maps/place/56250+Saint-Nolff/@47.7213156,-2.8858925,10.44z/data=!4m5!3m4!1s0x480fe0596ca7019d:0x40ca5cd36e2bbc0!8m2!3d47.702885!4d-2.651779"><i class="fas fa-map-marker-alt"></i>16 rue du bois, 56250, ST Nolff</a>
+		</div>
+		<div class="contact-form">
+			{{ form_start(contact) }}
+			<div class="contact-form-input">
+				<div class="contact-form-name">
+					{{ form_row(contact.name, {attr: {"placeholder": "Votre nom"}}) }}
+					{{ form_row(contact.email, {attr: {"placeholder": "Votre email"}}) }}
+					{{ form_row(contact.subject, {attr: {"placeholder": "Sujet"}}) }}
+				</div>
+				<div class="contact-form-message">
+					{{ form_row(contact.content, {attr: {"placeholder": "Votre message", "rows": 8}}) }}
+				</div>
+			</div>
+			<div class="contact-form-submit">
+				<button type="submit" class="custom-btn">
+					<i class="fas fa-paper-plane"></i>
+				</button>
+				
+			</div>
+			{{form_end(contact) }}
+		</div>
+
+
 	</div>
 
 {% endblock %}
