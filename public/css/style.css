@@ -1,14 +1,6 @@
-/* ****** COLOR ********/
-
-/* 
-Lavender #C96ED9
-Azure #3567AD
-Blush #BC4167
-Chalky #EDC990 
-*/
-
+/************************/
 /* ****** GLOBAL ********/
-
+/************************/
 
 body {
     margin: 0;
@@ -93,7 +85,7 @@ h5 {
 
 .page-header:after {
     content: "";
-    height: 200px;
+    height: 201px;
     background-color: rgba(0,0,0,0.7);
     width: 100%;
     position: absolute;
@@ -160,11 +152,81 @@ h5 {
 
 .nav .logo img {
     height: 50px;
+    z-index: 5;
 }
 
 .scrolled {
     background-color: whitesmoke;
     box-shadow: 0px -4px 10px 0px;
+}
+
+#nav-burger-button {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color:  rgba(160, 53, 85, 0.7);
+    padding: 0;
+    font-size: 30px;
+    vertical-align: top;
+    z-index: 1000;
+}
+
+#nav-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#nav-burger-sidebar {
+    display: none;
+    position: fixed;
+    width: 75%;
+    height: 100%;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: #a03555;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-out;
+};
+
+#nav-burger-sidebar-header {
+    height: 100px;
+}
+
+#nav-burger-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-burger-sidebar a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+@media(max-width: 700px) {
+    .top-nav {
+        display: none;
+    }
+
+    #nav-burger-button {
+        display: block;
+    }  
+
+    #nav-burger-sidebar {
+        display: flex;
+    }
 }
 
 /* ****** FOOTER ********/
