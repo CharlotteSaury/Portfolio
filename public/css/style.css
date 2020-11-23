@@ -747,7 +747,7 @@ footer a {
 /* ****** CONTACT FORM **********/
 
 .contact-div {
-    padding-top: 75px;
+    padding-top: 25px;
     padding-bottom: 50px;
     text-align: center;
 }
@@ -788,6 +788,23 @@ footer a {
     background-color: rgba(160, 53, 85, 0.2);
 }
 
+@media (max-width: 767px) {
+    .contact-div .contact-infos {
+        flex-direction: column;
+    }
+
+    .contact-div .contact-infos .custom-link {
+        margin-bottom: 10px;
+    }
+
+    .contact-div .contact-form-input {
+        flex-direction: column;
+    }
+    .contact-div .contact-form-input .contact-form-name, 
+    .contact-div .contact-form-input .contact-form-message {
+        width: 100%;
+    }
+}
 
 /**************************/
 /* ****** PORTFOLIO PAGE ********/
