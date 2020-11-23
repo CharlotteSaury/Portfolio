@@ -64,6 +64,20 @@ h5 {
     padding-right: 110px;
 }
 
+@media(max-width: 950px) {
+    .section {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media(max-width: 500px) {
+    .section {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
 .page-header {
     background-color: rgba(160, 53, 85, 0.7);
     height: 75px;
@@ -285,20 +299,6 @@ footer a {
     background-position: right;
 }
 
-/*.home-header:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    background: url('../images/home2.jpg') no-repeat;
-    background-size: 55%;
-    background-position: right;
-}*/
-
 .home-title-div {
     max-width: 40%;
     position: relative;
@@ -378,36 +378,72 @@ footer a {
     background-color: whitesmoke;
 }
 
-.photo-div {
+.about-div .photo-div {
     min-width: 300px;
     position: relative;
 }
 
-.photo {
-    background: url('../images/photo.jpg');
+.about-div .photo-div .photo {
+    background: url('../images/photo.jpg') no-repeat;
     background-size: 100%;
     position: relative;
-    height: 300px;
-    width: 250px;
-    border-radius: 10%;
 }
 
-.photo:before {
+.about-div  .photo-div .photo:before {
     background-color: hsla(330, 5%, 8%, 0.624);
     content: "";
     position: absolute;
     top: 40px;
     left: 40px;
-    height: 300px;
-    width: 250px;
-    border-radius: 10%;
     z-index: -1;
 }
 
-.about-text-div {
+.about-div .photo-div .photo, .about-div  .photo-div .photo:before {
+    height: 300px;
+    width: 250px;
+    border-radius: 10%;
+}
+
+.about-div .about-text-div {
     max-width: 65%;
     margin-left: 50px;
     padding-top: 25px;
+}
+
+.about-div .about-text-div p {
+    text-align: justify;
+}
+
+@media(max-width: 800px) {
+    .about-div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-div .about-text-div {
+        margin-left: 0;
+        max-width: 95%;
+        margin-top: 20px;
+    }
+}
+
+
+@media(max-width: 400px) {
+    .about-div .photo-div .photo, .about-div .photo-div .photo:before {
+        height: 250px;
+        width: 200px;
+    }
+
+    .about-div .photo-div .photo:before {
+        top: 20px;
+        left: 20px;
+    }
+
+    .about-div .photo-div .photo {
+        margin: auto;
+    }
 }
 
 .about-after-section {
