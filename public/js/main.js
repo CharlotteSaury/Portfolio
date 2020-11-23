@@ -1,9 +1,18 @@
 $(function () {
 
+  /** navbav display on scroll */
+
   $(document).scroll(function () {
-    var $nav = $(".nav");
-    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    $(".nav").toggleClass('scrolled', $(this).scrollTop() > $(".nav").height());
   });
+
+  /** back-to-top button display on scroll */
+
+  $(document).scroll(function () {
+    $("#back-to-top").toggleClass('scrolled-arrow', $(this).scrollTop() > 200 );
+  });
+
+  /** responsive navigation menu */
 
   var content = $('.top-nav');
   var sidebar = $('#nav-burger-sidebar');
