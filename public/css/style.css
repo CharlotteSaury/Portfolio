@@ -855,3 +855,21 @@ footer a {
     margin-right: 10px;
     margin-left: 10px;
 }
+
+@media (max-width: 800px) {
+    .page-content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .page-content .portfolio-div-realizations {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 0px;
+    } 
+}
+
+@media (max-width: 650px) {
+    .page-content .portfolio-div-realizations {
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
