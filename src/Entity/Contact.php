@@ -39,6 +39,13 @@ class Contact
     private $content;
 
     private $createdAt;
+
+    /**
+     * @var bool
+     * @Assert\NotNull()
+     * @Assert\IsTrue()
+     */
+    private $personalData;
     
 
     /**
@@ -137,6 +144,30 @@ class Contact
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of personalData
+     *
+     * @return  bool
+     */ 
+    public function getPersonalData()
+    {
+        return $this->personalData;
+    }
+
+    /**
+     * Set the value of personalData
+     *
+     * @param  bool  $personalData
+     *
+     * @return  self
+     */ 
+    public function setPersonalData(bool $personalData)
+    {
+        $this->personalData = $personalData;
 
         return $this;
     }

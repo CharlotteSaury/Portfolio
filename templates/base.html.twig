@@ -32,11 +32,11 @@
 		<nav class="nav">
 			<a class="logo" href="{{ path('home') }}"><img src="{{ asset('images/logo.png') }}" alt="logo"/></a>
 			<div class="top-nav">
-				<a href="{{ path('home') }}">Accueil</a>
-				<a href="#aboutSection">A propos</a>
-				<a href="#porfolioSection">Réalisations</a>
+				<a href="{{ path('home') }}#">Accueil</a>
+				<a href="{{ path('home') }}#aboutSection">A propos</a>
+				<a href="{{ path('home') }}#porfolioSection">Réalisations</a>
 				<a href="#">Parcours</a>
-				<a href="#contactForm">Contact</a>
+				<a href="{{ path('home') }}#contactForm">Contact</a>
 			</div>
 			<button id="nav-burger-button">&#9776;</button>
 		</nav>
@@ -62,7 +62,7 @@
 				<p>Copyright
 					<i class="far fa-copyright"></i>
 					Charlotte Saury 2020 |
-					<a href="">Mentions légales</a>
+					<a href="{{ path('mentions') }}">Mentions légales</a>
 				</p>
 			</div>
 		</footer>

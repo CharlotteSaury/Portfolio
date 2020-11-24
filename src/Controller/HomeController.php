@@ -29,6 +29,7 @@ class HomeController extends AbstractController
         $this->technoManager = $technoManager;
         $this->realizationManager = $realizationManager;
     }
+
     /**
      * @Route("/", name="home")
      */
@@ -48,12 +49,20 @@ class HomeController extends AbstractController
                 '_fragment' => '#contactForm',
             ]);
         }
-        
+
         return $this->render('home/index.html.twig', [
             'technos' => $technos,
             'realizations' => $realizations,
             'mozaic' => true,
             'contact' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/mentions-legales", name="mentions")
+     */
+    public function mentions(): Response
+    {
+        return $this->render('home/mentions.html.twig');
     }
 }

@@ -154,14 +154,20 @@
 			{{ form_start(contact) }}
 			<div class="contact-form-input">
 				<div class="contact-form-name">
-					{{ form_row(contact.name, {attr: {"placeholder": "Votre nom"}}) }}
-					{{ form_row(contact.email, {attr: {"placeholder": "Votre email"}}) }}
-					{{ form_row(contact.subject, {attr: {"placeholder": "Sujet"}}) }}
+					{{ form_row(contact.name, {attr: {"placeholder": "Votre nom *"}}) }}
+					{{ form_row(contact.email, {attr: {"placeholder": "Votre email *"}}) }}
+					{{ form_row(contact.subject, {attr: {"placeholder": "Sujet *"}}) }}
 				</div>
 				<div class="contact-form-message">
-					{{ form_row(contact.content, {attr: {"placeholder": "Votre message", "rows": 8}}) }}
+					{{ form_row(contact.content, {attr: {"placeholder": "Votre message *", "rows": 8}}) }}
 				</div>
 			</div>
+			<div class="contact-form-checkbox">
+				{{ form_widget(contact.personalData) }}
+				{{ form_label(contact.personalData) }}
+				{{ form_errors(contact.personalData) }}
+			</div>
+			<p>* Champs obligatoires</p>
 			<div class="contact-form-submit">
 				<button type="submit" class="custom-btn">
 					<i class="fas fa-paper-plane"></i>

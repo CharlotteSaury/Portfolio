@@ -4,13 +4,17 @@ namespace App\Manager;
 
 use App\Entity\Contact;
 use App\Helper\MailSenderHelper;
+use Doctrine\ORM\EntityManagerInterface;
 
 class ContactManager
 {
     private $mailSenderHelper;
 
-    public function __construct(MailSenderHelper $mailSenderHelper) {
+    private $entityManager;
+
+    public function __construct(MailSenderHelper $mailSenderHelper, EntityManagerInterface $entityManager) {
         $this->mailSenderHelper = $mailSenderHelper;
+        $this->entityManager = $entityManager;
     }
 
     public function handleContactForm(Contact $contact)

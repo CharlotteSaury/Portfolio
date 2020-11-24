@@ -812,6 +812,10 @@ footer a {
     margin-bottom: 10px;
 }
 
+.contact-form .contact-form-checkbox input {
+    max-width: 5%;
+}
+
 .contact-form-submit {
     margin-top: 25px;
 }
@@ -918,4 +922,10 @@ footer a {
         max-width: 40%;
         font-size: 12px;
     }
+}
+
+/* ******** MENTIONS LEGALES **************/
+
+.page-content #mentions {
+    text-align: justify;
 }
