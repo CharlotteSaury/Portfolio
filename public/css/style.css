@@ -407,6 +407,7 @@ footer a {
     padding-bottom: 135px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: whitesmoke;
 }
 
@@ -439,14 +440,13 @@ footer a {
 .about-div .about-text-div {
     max-width: 65%;
     margin-left: 50px;
-    padding-top: 25px;
 }
 
 .about-div .about-text-div p {
     text-align: justify;
 }
 
-@media(max-width: 800px) {
+@media(max-width: 900px) {
     .about-div {
         flex-direction: column;
         justify-content: center;
