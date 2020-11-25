@@ -6,6 +6,7 @@ use App\Repository\RealizationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=RealizationRepository::class)
@@ -21,21 +22,33 @@ class Realization
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=2, max=255)
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=2, max=255)
      */
     private $shortDesc;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=10, max=3000)
      */
     private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=2, max=255)
      */
     private $context;
 
@@ -70,18 +83,20 @@ class Realization
     private $image;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\OneToMany(targetEntity=Expectation::class, mappedBy="realization", orphanRemoval=true, cascade={"persist"})
      */
-    private $skills = [];
+    private $expectations;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\OneToMany(targetEntity=Skill::class, mappedBy="realization", orphanRemoval=true, cascade={"persist"})
      */
-    private $expectations = [];
+    private $skills;
 
     public function __construct()
     {
         $this->technos = new ArrayCollection();
+        $this->expectations = new ArrayCollection();
+        $this->skills = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -226,26 +241,62 @@ class Realization
         return mb_strtolower(str_replace(' ', '_', $this->title));
     }
 
-    public function getSkills(): ?array
-    {
-        return $this->skills;
-    }
-
-    public function setSkills(?array $skills): self
-    {
-        $this->skills = $skills;
-
-        return $this;
-    }
-
-    public function getExpectations(): ?array
+    /**
+     * @return Collection|Expectation[]
+     */
+    public function getExpectations(): Collection
     {
         return $this->expectations;
     }
 
-    public function setEexpectations(?array $expectations): self
+    public function addExpectation(Expectation $expectation): self
     {
-        $this->expectations = $expectations;
+        if (!$this->expectations->contains($expectation)) {
+            $this->expectations[] = $expectation;
+            $expectation->setRealization($this);
+        }
+
+        return $this;
+    }
+
+    public function removeExpectation(Expectation $expectation): self
+    {
+        if ($this->expectations->removeElement($expectation)) {
+            // set the owning side to null (unless already changed)
+            if ($expectation->getRealization() === $this) {
+                $expectation->setRealization(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Skill[]
+     */
+    public function getSkills(): Collection
+    {
+        return $this->skills;
+    }
+
+    public function addSkill(Skill $skill): self
+    {
+        if (!$this->skills->contains($skill)) {
+            $this->skills[] = $skill;
+            $skill->setRealization($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSkill(Skill $skill): self
+    {
+        if ($this->skills->removeElement($skill)) {
+            // set the owning side to null (unless already changed)
+            if ($skill->getRealization() === $this) {
+                $skill->setRealization(null);
+            }
+        }
 
         return $this;
     }
