@@ -70,3 +70,23 @@
 .dashboard-form-submit {
     text-align: center;
 }
+
+#dashboard table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#dashboard thead {
+    background-color: whitesmoke;
+}
+
+#dashboard tr {
+    height: 40px;
+    border: 1px solid black;
+}
+
+#dashboard table i {
+    margin: 0px 5px;
+}

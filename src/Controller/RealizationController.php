@@ -72,8 +72,8 @@ class RealizationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $realization = $this->realizationManager->handleCreateOrUpdate($realization, $form);
-            $this->addFlash('success', 'La réalsiation a été créée');
+            $realization = $this->realizationManager->handleCreateOrUpdate($realization);
+            $this->addFlash('success', 'La réalisation a bien été créée');
 
             return $this->redirectToRoute('realization.show', [
                 'id' => $realization->getId(),
@@ -85,6 +85,31 @@ class RealizationController extends AbstractController
             'realization' => $realization,
             'form' => $form->createView(),
             'dashboardnav' => 'realization.create',
+        ]);
+    }
+
+    /**
+     * @Route("/realisation/{id}/edit", name="realization.edit")
+     */
+    public function edit(Realization $realization, Request $request): Response
+    {
+        $form = $this->createForm(RealizationType::class, $realization);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $realization = $this->realizationManager->handleCreateOrUpdate($realization);
+            $this->addFlash('success', 'La réalsiation a été modifiée');
+
+            return $this->redirectToRoute('realization.show', [
+                'id' => $realization->getId(),
+                'slug' => $realization->getSlug(),
+            ]);
+        }
+
+        return $this->render('realization/new.html.twig', [
+            'realization' => $realization,
+            'form' => $form->createView(),
+            'dashboardnav' => 'realization.edit',
         ]);
     }
 }

@@ -1,0 +1,31 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}Dashboard
+{% endblock %}
+
+{% block contenttitle %}Toutes les réalisations{% endblock %}
+
+{% block body %}
+	<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for realization in realizations %}
+        <tr>
+            <td>{{ realization.id }}</td>
+            <td><a href="{{ path('realization.show', {id: realization.id, slug: realization.slug } ) }}" class="custom-link">{{ realization.title }}</a></td>
+            <td>
+                <a href="{{ path('realization.edit', {id: realization.id } ) }}" class="custom-link"><i class="fas fa-pencil-alt"></i></a>
+                <a href="#" class="custom-link"><i class="fas fa-trash-alt"></i></a>
+            </td>
+        </tr>
+    {% endfor %}
+        
+    </tbody>
+</table>
+{% endblock %}
