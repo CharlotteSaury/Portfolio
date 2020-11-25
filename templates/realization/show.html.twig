@@ -44,6 +44,25 @@
 			{% endfor %}
 			<h4>Description</h4>
 			<p>{{ realization.description }}</p>
+			{% if realization.expectations is not empty %}
+				<h4>Les attentes</h4>
+				<ul>
+					{% for expectation in realization.expectations %}
+						<li>{{ expectation.description }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+			{% if realization.skills is not empty %}
+				<h4>Compétences évaluées</h4>
+				<ul>
+					{% for skill in realization.skills %}
+						<li>{{ skill.description }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+			
+			
+
 		</div>
 
 		<div class="other-realizations-links">
