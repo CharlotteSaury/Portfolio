@@ -96,15 +96,17 @@ class RealizationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+    
             $realization = $this->realizationManager->handleCreateOrUpdate($realization);
             $this->addFlash('success', 'La réalisation a bien été modifiée');
 
             return $this->redirectToRoute('admin.realization.index');
         }
 
-        return $this->render('realization/edit.html.twig', [
+        return $this->render('realization/new.html.twig', [
             'realization' => $realization,
             'form' => $form->createView(),
+            'action' => 'edit'
         ]);
     }
 

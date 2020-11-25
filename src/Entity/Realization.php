@@ -2,14 +2,21 @@
 
 namespace App\Entity;
 
-use App\Repository\RealizationRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\RealizationRepository;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation\UploadableField;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Entity(repositoryClass=RealizationRepository::class)
+ * @UniqueEntity("title")
+ * @Vich\Uploadable()
  */
 class Realization
 {
@@ -78,6 +85,13 @@ class Realization
     private $createdAt;
 
     /**
+     * @var File|null
+     * @Vich\UploadableField(mapping="realization_image", fileNameProperty="image")
+     */
+    private $imageFile;
+
+    /**
+     * @var string|null
      * @ORM\Column(type="string", length=255)
      */
     private $image;
@@ -92,8 +106,14 @@ class Realization
      */
     private $skills;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updatedAt;
+
     public function __construct()
     {
+        $this->updatedAt = new \DateTime();
         $this->technos = new ArrayCollection();
         $this->expectations = new ArrayCollection();
         $this->skills = new ArrayCollection();
@@ -224,15 +244,22 @@ class Realization
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getImage(): ?string
     {
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    /**
+     * @param null|string $image
+     * @return self
+     */
+    public function setImage($image): self
     {
         $this->image = $image;
-
+        
         return $this;
     }
 
@@ -297,6 +324,41 @@ class Realization
                 $skill->setRealization(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * Get var File
+     */ 
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * Set var File
+     *
+     * @return  self
+     */ 
+    public function setImageFile($imageFile)
+    {
+        $this->imageFile = $imageFile;
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime();
+        }
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }

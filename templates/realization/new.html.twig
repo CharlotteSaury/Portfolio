@@ -11,7 +11,7 @@
         <h4>Informations</h4>
         {{ form_row(form.title) }}
         {{ form_row(form.context) }}
-        {{ form_row(form.image) }}
+        {{ form_row(form.imageFile) }}
 
         <h4>Date de réalisation</h4>
 
@@ -73,7 +73,7 @@
         </div>
 
         <div class="dashboard-form-submit">
-            <button type="submit" class="custom-btn">Ajouter</button>
+            <button type="submit" class="custom-btn">{% if action is defined and action == "edit" %}Editer{% else %}Ajouter{% endif %}</button>
         </div>
         
         

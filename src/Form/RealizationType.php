@@ -12,6 +12,7 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
@@ -70,11 +71,9 @@ class RealizationType extends AbstractType
             ->add('createdAt', DateType::class, [
                 'label' => false,
             ])
-            ->add('image', TextType::class, [
-                'label' => false,
-                'attr' => [
-                    'placeholder' => 'ImageName'
-                ]
+            ->add('imageFile', FileType::class, [
+                'label' => 'Image principale',
+                'required' => false
             ])
             ->add('skills', CollectionType::class, [
                 'entry_type' => SkillType::class,

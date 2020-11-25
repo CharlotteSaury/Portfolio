@@ -57,6 +57,7 @@ class RealizationManager
         if ($realization->getId() == null) {
             $this->entityManager->persist($realization);
         }
+        $realization->setUpdatedAt(new \DateTime());
         $this->entityManager->flush();
         return $realization;
     }
