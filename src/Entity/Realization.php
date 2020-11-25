@@ -69,6 +69,16 @@ class Realization
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     */
+    private $skills = [];
+
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     */
+    private $expectations = [];
+
     public function __construct()
     {
         $this->technos = new ArrayCollection();
@@ -214,5 +224,29 @@ class Realization
     public function getSlug(): ?string
     {
         return mb_strtolower(str_replace(' ', '_', $this->title));
+    }
+
+    public function getSkills(): ?array
+    {
+        return $this->skills;
+    }
+
+    public function setSkills(?array $skills): self
+    {
+        $this->skills = $skills;
+
+        return $this;
+    }
+
+    public function getExpectations(): ?array
+    {
+        return $this->expectations;
+    }
+
+    public function setEexpectations(?array $expectations): self
+    {
+        $this->expectations = $expectations;
+
+        return $this;
     }
 }
