@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Realization;
 use App\Form\RealizationType;
-use App\Manager\TechnoManager;
 use App\Manager\RealizationManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -59,11 +58,12 @@ class RealizationController extends AbstractController
         
         return $this->render('realization/admin.index.html.twig', [
             'realizations' => $realizations,
+            'dashboardnav' => 'realization.index'
         ]);
     }
 
     /**
-     * @Route("/realisation/create", name="realization.create")
+     * @Route("/admin/realisation/create", name="realization.create")
      */
     public function create(Request $request): Response
     {
@@ -89,7 +89,7 @@ class RealizationController extends AbstractController
     }
 
     /**
-     * @Route("/realisation/{id}/edit", name="realization.edit")
+     * @Route("/admin/realisation/edit/{id}", name="realization.edit")
      */
     public function edit(Realization $realization, Request $request): Response
     {
@@ -98,18 +98,14 @@ class RealizationController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $realization = $this->realizationManager->handleCreateOrUpdate($realization);
-            $this->addFlash('success', 'La réalsiation a été modifiée');
+            $this->addFlash('success', 'La réalisation a bien été modifiée');
 
-            return $this->redirectToRoute('realization.show', [
-                'id' => $realization->getId(),
-                'slug' => $realization->getSlug(),
-            ]);
+            return $this->redirectToRoute('admin.realization.index');
         }
 
-        return $this->render('realization/new.html.twig', [
+        return $this->render('realization/edit.html.twig', [
             'realization' => $realization,
             'form' => $form->createView(),
-            'dashboardnav' => 'realization.edit',
         ]);
     }
 }
