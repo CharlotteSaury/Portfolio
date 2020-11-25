@@ -3,11 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\Realization;
+use App\Form\RealizationType;
 use App\Manager\TechnoManager;
 use App\Manager\RealizationManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 
 class RealizationController extends AbstractController
 {
@@ -45,6 +47,44 @@ class RealizationController extends AbstractController
             'realization' => $realization,
             'previous' => $previousRealization,
             'next' => $nextRealization,
+        ]);
+    }
+
+    /**
+     * @Route("/admin/realisations", name="admin.realization.index")
+     */
+    public function adminIndex(): Response
+    {
+        $realizations = $this->realizationManager->findAll();
+        
+        return $this->render('realization/admin.index.html.twig', [
+            'realizations' => $realizations,
+        ]);
+    }
+
+    /**
+     * @Route("/realisation/create", name="realization.create")
+     */
+    public function create(Request $request): Response
+    {
+        $realization = new Realization();
+        $form = $this->createForm(RealizationType::class, $realization);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $realization = $this->realizationManager->handleCreateOrUpdate($realization, $form);
+            $this->addFlash('success', 'La réalsiation a été créée');
+
+            return $this->redirectToRoute('realization.show', [
+                'id' => $realization->getId(),
+                'slug' => $realization->getSlug(),
+            ]);
+        }
+
+        return $this->render('realization/new.html.twig', [
+            'realization' => $realization,
+            'form' => $form->createView(),
+            'dashboardnav' => 'realization.create',
         ]);
     }
 }

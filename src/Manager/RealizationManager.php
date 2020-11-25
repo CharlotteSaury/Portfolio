@@ -4,14 +4,24 @@ namespace App\Manager;
 
 use App\Entity\Realization;
 use App\Repository\RealizationRepository;
+use Doctrine\ORM\EntityManagerInterface;
 
 class RealizationManager 
 {
+    /**
+     * @var RealizationRepository
+     */
     private $realizationRepository;
 
-    public function __construct(RealizationRepository $realizationRepository)
+    /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
+
+    public function __construct(RealizationRepository $realizationRepository, EntityManagerInterface $entityManager)
     {
         $this->realizationRepository = $realizationRepository;
+        $this->entityManager = $entityManager;
     }
 
     public function findAll()
@@ -40,6 +50,15 @@ class RealizationManager
             return $nextRealization;
         }
         return null;
+    }
+
+    public function handleCreateOrUpdate(Realization $realization)
+    {
+        if ($realization->getId() == null) {
+            $this->entityManager->persist($realization);
+        }
+        $this->entityManager->flush();
+        return $realization;
     }
 
 }
