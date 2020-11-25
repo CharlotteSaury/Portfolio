@@ -47,6 +47,16 @@
 						<h3>
 							{% block contenttitle %}{% endblock %}
 						</h3>
+						{% for message in app.flashes('success') %}
+							<div class="alert-success">
+								<i class="fas fa-check"></i>{{ message }}
+							</div>
+						{% endfor %}
+						{% for message in app.flashes('error') %}
+							<div class="alert-error">
+								<i class="fas fa-times"></i>{{ message }}
+							</div>
+						{% endfor %}
 					</div>
 					<div class="dashboard-content-content"> {% block body %}{% endblock %}
 

@@ -147,7 +147,15 @@ input, textarea, select {
     margin-top: 40px;
 }
 
-.alert-success i {
+.alert-error {
+    padding: 15px;
+    background-color: rgba(160, 53, 85, 0.7); ;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.alert-success i, .alert-error i {
     margin-right: 10px;
 }
 

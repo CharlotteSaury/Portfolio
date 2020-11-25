@@ -73,7 +73,6 @@ class RealizationController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $realization = $this->realizationManager->handleCreateOrUpdate($realization);
-            $this->addFlash('success', 'La réalisation a bien été créée');
 
             return $this->redirectToRoute('realization.show', [
                 'id' => $realization->getId(),
@@ -107,5 +106,24 @@ class RealizationController extends AbstractController
             'realization' => $realization,
             'form' => $form->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/admin/realisation/delete/{id}", name="realization.delete")
+     *
+     * @return Response
+     */
+    public function delete(Request $request, Realization $realization)
+    {
+        if ($this->isCsrfTokenValid('realization_deletion_'.$realization->getId(), $request->get('_token'))) {
+            $this->realizationManager->handleRealizationDeletion($realization);
+
+            $this->addFlash('success', 'La réalisation a bien été supprimée !');
+
+            return $this->redirectToRoute('admin.realization.index');
+        }
+        $this->addFlash('error', 'Une erreur est survenue');
+
+        return $this->redirectToRoute('admin.realization.index');
     }
 }

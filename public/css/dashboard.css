@@ -78,6 +78,11 @@
     border-collapse: collapse;
 }
 
+#dashboard #table-action {
+    display: flex;
+    justify-content: center;
+}
+
 #dashboard thead {
     background-color: whitesmoke;
 }
@@ -89,4 +94,9 @@
 
 #dashboard table i {
     margin: 0px 5px;
+}
+
+#dashboard table button {
+    border: none;
+    background-color: white;
 }

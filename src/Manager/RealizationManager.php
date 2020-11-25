@@ -61,4 +61,14 @@ class RealizationManager
         return $realization;
     }
 
+    public function handleRealizationDeletion(Realization $realization)
+    {
+        try {
+            $this->entityManager->remove($realization);
+            $this->entityManager->flush();
+        } catch (\Exception $exception) {
+            throw $exception;
+        }
+    }
+
 }
