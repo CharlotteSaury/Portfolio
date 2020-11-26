@@ -1,0 +1,35 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}Dashboard
+{% endblock %}
+
+{% block contenttitle %}Toutes les réalisations{% endblock %}
+
+{% block body %}
+	<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for realization in realizations %}
+        <tr>
+            <td>{{ realization.id }}</td>
+            <td><a href="{{ path('realization.show', {id: realization.id, slug: realization.slug } ) }}" class="custom-link">{{ realization.title }}</a></td>
+            <td id="table-action">
+                <a href="{{ path('realization.edit', {id: realization.id } ) }}" class="custom-link"><i class="fas fa-pencil-alt"></i></a>
+                <form method="post" action="{{ path('realization.delete', {id: realization.id}) }}">
+					<input type="hidden" name="_method" value="DELETE">
+					<input type="hidden" name="_token" id="csrf_deletion" value="{{ csrf_token('realization_deletion_' ~ realization.id) }}">
+					<button type="submit" class="custom-link"><i class="fas fa-trash-alt"></i></button>
+				</form>
+            </td>
+        </tr>
+    {% endfor %}
+        
+    </tbody>
+</table>
+{% endblock %}

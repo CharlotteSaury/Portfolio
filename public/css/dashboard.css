@@ -1,0 +1,102 @@
+#dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+#dashboard input, #dashboard textarea, #dashboard select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#dashboard .custom-btn {
+    width: auto;
+}
+
+#dashboard-nav {
+    box-sizing: border-box;
+    width: 25%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 35px 0px;
+    height: 100%;
+}
+
+#dashboard-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+#dashboard-nav a:hover {
+    background-color: #bc4167;
+}
+
+#dashboard-nav .active-dashboard-nav{
+    background-color: #bc4167;
+}
+
+.dashboard-page {
+    width: 75%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.dashboard-content {
+    padding: 0px 30px 30px 30px;
+
+}
+
+.dashboard-top {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: right;
+}
+
+.dashboard-top h2 {
+    margin: 0;
+}
+
+.dashboard-content-title {
+    text-align: center;
+}
+
+.dashboard-content li {
+    list-style-type: none;
+    width: 100%;
+}
+
+.dashboard-form-submit {
+    text-align: center;
+}
+
+#dashboard table {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#dashboard #table-action {
+    display: flex;
+    justify-content: center;
+}
+
+#dashboard thead {
+    background-color: whitesmoke;
+}
+
+#dashboard tr {
+    height: 40px;
+    border: 1px solid black;
+}
+
+#dashboard table i {
+    margin: 0px 5px;
+}
+
+#dashboard table button {
+    border: none;
+    background-color: white;
+}

@@ -64,6 +64,15 @@ h5 {
     padding-right: 110px;
 }
 
+input, textarea, select {
+    background-color: whitesmoke;
+    border: none;
+    width: 85%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
 @media(max-width: 950px) {
     .section {
         padding-left: 60px;
@@ -138,7 +147,15 @@ h5 {
     margin-top: 40px;
 }
 
-.alert-success i {
+.alert-error {
+    padding: 15px;
+    background-color: rgba(160, 53, 85, 0.7); ;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.alert-success i, .alert-error i {
     margin-right: 10px;
 }
 
@@ -803,15 +820,6 @@ footer a {
     width: 50%;
 }
 
-.contact-form input, .contact-form textarea {
-    background-color: whitesmoke;
-    border: none;
-    width: 85%;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
 .contact-form .contact-form-checkbox input {
     max-width: 5%;
 }
@@ -876,6 +884,13 @@ footer a {
 
 .realization-description-div {
     text-align: center;
+}
+
+.realization-description-div ul {
+    display: inline-block;
+    text-align: justify;
+    list-style-type: circle;
+    margin: 0;
 }
 
 .realization-description-div img {

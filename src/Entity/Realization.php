@@ -2,13 +2,21 @@
 
 namespace App\Entity;
 
-use App\Repository\RealizationRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\RealizationRepository;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation\UploadableField;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Entity(repositoryClass=RealizationRepository::class)
+ * @UniqueEntity("title")
+ * @Vich\Uploadable()
  */
 class Realization
 {
@@ -21,21 +29,33 @@ class Realization
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=2, max=255)
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=2, max=255)
      */
     private $shortDesc;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=10, max=3000)
      */
     private $description;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(min=2, max=255)
      */
     private $context;
 
@@ -65,13 +85,38 @@ class Realization
     private $createdAt;
 
     /**
+     * @var File|null
+     * @Vich\UploadableField(mapping="realization_image", fileNameProperty="image")
+     */
+    private $imageFile;
+
+    /**
+     * @var string|null
      * @ORM\Column(type="string", length=255)
      */
     private $image;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Expectation::class, mappedBy="realization", orphanRemoval=true, cascade={"persist"})
+     */
+    private $expectations;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Skill::class, mappedBy="realization", orphanRemoval=true, cascade={"persist"})
+     */
+    private $skills;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $updatedAt;
+
     public function __construct()
     {
+        $this->updatedAt = new \DateTime();
         $this->technos = new ArrayCollection();
+        $this->expectations = new ArrayCollection();
+        $this->skills = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -199,20 +244,122 @@ class Realization
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getImage(): ?string
     {
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    /**
+     * @param null|string $image
+     * @return self
+     */
+    public function setImage($image): self
     {
         $this->image = $image;
-
+        
         return $this;
     }
 
     public function getSlug(): ?string
     {
         return mb_strtolower(str_replace(' ', '_', $this->title));
+    }
+
+    /**
+     * @return Collection|Expectation[]
+     */
+    public function getExpectations(): Collection
+    {
+        return $this->expectations;
+    }
+
+    public function addExpectation(Expectation $expectation): self
+    {
+        if (!$this->expectations->contains($expectation)) {
+            $this->expectations[] = $expectation;
+            $expectation->setRealization($this);
+        }
+
+        return $this;
+    }
+
+    public function removeExpectation(Expectation $expectation): self
+    {
+        if ($this->expectations->removeElement($expectation)) {
+            // set the owning side to null (unless already changed)
+            if ($expectation->getRealization() === $this) {
+                $expectation->setRealization(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Skill[]
+     */
+    public function getSkills(): Collection
+    {
+        return $this->skills;
+    }
+
+    public function addSkill(Skill $skill): self
+    {
+        if (!$this->skills->contains($skill)) {
+            $this->skills[] = $skill;
+            $skill->setRealization($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSkill(Skill $skill): self
+    {
+        if ($this->skills->removeElement($skill)) {
+            // set the owning side to null (unless already changed)
+            if ($skill->getRealization() === $this) {
+                $skill->setRealization(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get var File
+     */ 
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * Set var File
+     *
+     * @return  self
+     */ 
+    public function setImageFile($imageFile)
+    {
+        $this->imageFile = $imageFile;
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updatedAt = new \DateTime();
+        }
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
     }
 }

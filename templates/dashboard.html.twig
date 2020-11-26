@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>
+			{% block title %}Tableau de bord
+			{% endblock %}
+		</title>
+
+		{% block stylesheets %}
+
+			<!-- Custom CSS -->
+			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+			<link
+			rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+
+			<!-- fonts -->
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link
+			href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Heebo:wght@100;300&family=Lobster&display=swap" rel="stylesheet">
+
+			<!-- font-awesome -->
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+		{% endblock %}
+	</head>
+
+	<body>
+		<div id="dashboard">
+			<div id="dashboard-nav">
+				<a href="{{ path('home') }}">
+					<i class="fas fa-arrow-circle-left"></i>Retour</a>
+				<a href="{{ path('admin.realization.index') }}" {% if dashboardnav is defined and dashboardnav == 'realization.index' %}class="active-dashboard-nav"{% endif %}>Réalisations</a>
+				<a href="{{ path('realization.create') }}" {% if dashboardnav is defined and dashboardnav == 'realization.create' %}class="active-dashboard-nav"{% endif %}>Nouvelle réalisation</a>
+				<a href="#">Technos</a>
+				<a href="#">Nouvelle techno</a>
+			</div>
+			<div class="dashboard-page">
+				<div class="dashboard-top">
+					<h2>Dashboard</h2>
+				</div>
+				<div class="dashboard-content">
+					<div class="dashboard-content-title">
+						<h3>
+							{% block contenttitle %}{% endblock %}
+						</h3>
+						{% for message in app.flashes('success') %}
+							<div class="alert-success">
+								<i class="fas fa-check"></i>{{ message }}
+							</div>
+						{% endfor %}
+						{% for message in app.flashes('error') %}
+							<div class="alert-error">
+								<i class="fas fa-times"></i>{{ message }}
+							</div>
+						{% endfor %}
+					</div>
+					<div class="dashboard-content-content"> {% block body %}{% endblock %}
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			{% block javascripts %}
+				<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+				<script src="{{ asset('js/main.js') }}"></script>
+				<script src="{{ asset('js/add-collection-widget.js') }}"></script>
+			{% endblock %}
+		</body>
+	</html>
