@@ -39,4 +39,14 @@ class TechnoManager
         return $techno;
     }
 
+    public function handleTechnoDeletion(Techno $techno) 
+    {
+        try {
+            $this->entityManager->remove($techno);
+            $this->entityManager->flush();
+        } catch (\Exception $exception) {
+            throw $exception;
+        }
+    }
+
 }

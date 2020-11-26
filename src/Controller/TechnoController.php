@@ -81,4 +81,23 @@ class TechnoController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/admin/techno/delete/{id}", name="techno.delete")
+     *
+     * @return Response
+     */
+    public function delete(Request $request, Techno $techno)
+    {
+        if ($this->isCsrfTokenValid('techno_deletion_'.$techno->getId(), $request->get('_token'))) {
+            $this->technoManager->handleTechnoDeletion($techno);
+
+            $this->addFlash('success', 'La techno a bien été supprimée !');
+
+            return $this->redirectToRoute('admin.techno.index');
+        }
+        $this->addFlash('error', 'Une erreur est survenue');
+
+        return $this->redirectToRoute('admin.techno.index');
+    }
+
 }
