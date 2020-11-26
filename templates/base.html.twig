@@ -35,6 +35,9 @@
 				<a href="{{ path('home') }}#aboutSection">A propos</a>
 				<a href="{{ path('home') }}#porfolioSection">Réalisations</a>
 				<a href="{{ path('home') }}#contactForm">Contact</a>
+				{% if app.user %}
+					<a href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
+				{% endif %}
 			</div>
 			<button id="nav-burger-button">&#9776;</button>
 		</nav>
@@ -60,7 +63,12 @@
 				<p>Copyright
 					<i class="far fa-copyright"></i>
 					Charlotte Saury 2020 |
-					<a href="{{ path('mentions') }}">Mentions légales</a>
+					<a href="{{ path('mentions') }}">Mentions légales</a> | 
+					{% if app.user and is_granted("ROLE_ADMIN") %}
+						<a href="{{ path('admin.realization.index') }}">Admin</a>
+					{% else %}
+						<a href="{{ path('app_login') }}"><i class="fas fa-sign-in-alt"></i></a>
+					{% endif %}
 				</p>
 			</div>
 		</footer>
