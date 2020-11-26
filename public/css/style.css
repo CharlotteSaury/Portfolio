@@ -939,6 +939,15 @@ footer a {
     }
 }
 
+/********** LOGIN PAGE *******************/
+
+.page-content-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /* ******** MENTIONS LEGALES **************/
 
 .page-content #mentions {

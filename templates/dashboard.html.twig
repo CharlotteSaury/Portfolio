@@ -37,6 +37,9 @@
 				<a href="{{ path('realization.create') }}" {% if dashboardnav is defined and dashboardnav == 'realization.create' %}class="active-dashboard-nav"{% endif %}>Nouvelle réalisation</a>
 				<a href="{{ path('admin.techno.index') }}" {% if dashboardnav is defined and dashboardnav == 'techno.index' %}class="active-dashboard-nav"{% endif %}>Technos</a>
 				<a href="{{ path('admin.techno.create') }}" {% if dashboardnav is defined and dashboardnav == 'techno.create' %}class="active-dashboard-nav"{% endif %}>Nouvelle techno</a>
+				{% if app.user %}
+					<a href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
+				{% endif %}
 			</div>
 			<div class="dashboard-page">
 				<div class="dashboard-top">
