@@ -44,9 +44,13 @@
 					<div class="skills-card-content-text"></div>
 					<div class="skills-card-content-logo">
 						{% for techno in technos %}
-							{% if techno.type == 'language' %}
+							{% if techno.type == 'Frontend' %}
 								<div class="techno-card">
-									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									{% if techno.image %}
+										<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									{% else %}
+										<p>{{techno.title}}</p>
+									{% endif %}
 									<div class="techno-level">
 										{% for i in 1..techno.level %}
 											<div class="skills-plain-level"></div>
@@ -72,9 +76,13 @@
 					<div class="skills-card-content-text"></div>
 					<div class="skills-card-content-logo">
 						{% for techno in technos %}
-							{% if techno.type == 'framework' %}
+							{% if techno.type == 'Backend' %}
 								<div class="techno-card">
-									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									{% if techno.image %}
+										<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									{% else %}
+										<p>{{techno.title}}</p>
+									{% endif %}
 									<div class="techno-level">
 										{% for i in 1..techno.level %}
 											<div class="skills-plain-level"></div>
@@ -100,9 +108,13 @@
 					<div class="skills-card-content-text"></div>
 					<div class="skills-card-content-logo">
 						{% for techno in technos %}
-							{% if techno.type == 'tool' %}
+							{% if techno.type == 'Tools' %}
 								<div class="techno-card">
-									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									{% if techno.image %}
+										<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
+									{% else %}
+										<p>{{techno.title}}</p>
+									{% endif %}
 									<div class="techno-level">
 										{% for i in 1..techno.level %}
 											<div class="skills-plain-level"></div>

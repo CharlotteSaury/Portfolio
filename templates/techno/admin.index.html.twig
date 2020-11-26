@@ -1,0 +1,37 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}Dashboard
+{% endblock %}
+
+{% block contenttitle %}Toutes les technologies{% endblock %}
+
+{% block body %}
+	<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Niveau</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for techno in technos %}
+        <tr>
+            <td>{{ techno.id }}</td>
+            <td>{{ techno.title }}</td>
+            <td>{{ techno.level }} / 5</td>
+            <td id="table-action">
+                <a href="{{ path('admin.techno.edit', {id: techno.id } ) }}" class="custom-link"><i class="fas fa-pencil-alt"></i></a>
+                <form method="post" action="{{ path('techno.delete', {id: techno.id}) }}">
+					<input type="hidden" name="_method" value="DELETE">
+					<input type="hidden" name="_token" id="csrf_deletion" value="{{ csrf_token('techno_deletion_' ~ techno.id) }}">
+					<button type="submit" class="custom-link"><i class="fas fa-trash-alt"></i></button>
+				</form>
+            </td>
+        </tr>
+    {% endfor %}
+        
+    </tbody>
+</table>
+{% endblock %}

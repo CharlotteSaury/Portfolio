@@ -6,6 +6,10 @@ vich_uploader:
             uri_prefix: /images/realization
             upload_destination: '%kernel.project_dir%/public/images/realization'
             namer: Vich\UploaderBundle\Naming\UniqidNamer
+        techno_image:
+            uri_prefix: /images/techno
+            upload_destination: '%kernel.project_dir%/public/images/techno'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
 
     #mappings:
     #    products:
