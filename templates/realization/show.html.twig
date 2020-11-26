@@ -5,7 +5,25 @@
 
 {% block body %}
 	<div class="page-header">
-		<h2>{{ realization.title }}</h2>
+		<h2>
+			{{ realization.title }}
+			<span>
+				{% if app.user and is_granted("ROLE_ADMIN") %}
+					<div class="realization-show-action">
+						<a href="{{ path('realization.edit', {id: realization.id } ) }}" class="custom-link">
+							<i class="fas fa-pencil-alt"></i>
+						</a>
+						<form method="post" action="{{ path('realization.delete', {id: realization.id}) }}">
+							<input type="hidden" name="_method" value="DELETE">
+							<input type="hidden" name="_token" id="csrf_deletion" value="{{ csrf_token('realization_deletion_' ~ realization.id) }}">
+							<button type="submit" class="custom-link">
+								<i class="fas fa-trash-alt"></i>
+							</button>
+						</form>
+					</div>
+				{% endif %}
+			</span>
+		</h2>
 		<a class="custom-link" href="{{ path('realization.index') }}">
 			<i class="fas fa-th"></i>
 			Retour au portfolio
@@ -20,17 +38,20 @@
 		<div class="realization-show-links-div">
 			{% if realization.url %}
 				<a class="custom-btn" href="{{ realization.url }}" target="_hblank">
-					<i class="far fa-eye"></i><span>Voir le site</span>
+					<i class="far fa-eye"></i>
+					<span>Voir le site</span>
 				</a>
 			{% endif %}
 			{% if realization.github %}
 				<a class="custom-btn" href="{{ realization.github }}" target="_hblank">
-					<i class="fab fa-github"></i><span>Repo GitHub</span>
+					<i class="fab fa-github"></i>
+					<span>Repo GitHub</span>
 				</a>
 			{% endif %}
 			{% if realization.github %}
 				<a class="custom-btn" href="{{ realization.github }}" target="_hblank">
-					<i class="fab fa-youtube"></i><span>Soutenance</span>
+					<i class="fab fa-youtube"></i>
+					<span>Soutenance</span>
 				</a>
 			{% endif %}
 		</div>
@@ -60,8 +81,7 @@
 					{% endfor %}
 				</ul>
 			{% endif %}
-			
-			
+
 
 		</div>
 
