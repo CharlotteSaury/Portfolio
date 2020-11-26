@@ -853,6 +853,17 @@ footer a {
 /**************************/
 /* ****** PORTFOLIO PAGE ********/
 /**************************/
+.realization-show-action {
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+.realization-show-action button {
+    border: none;
+    background: none;
+}
 
 .page-content-show {
     text-align: center;
