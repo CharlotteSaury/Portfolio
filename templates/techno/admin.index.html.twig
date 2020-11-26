@@ -1,0 +1,32 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}Dashboard
+{% endblock %}
+
+{% block contenttitle %}Toutes les technologies{% endblock %}
+
+{% block body %}
+	<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Niveau</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for techno in technos %}
+        <tr>
+            <td>{{ techno.id }}</td>
+            <td>{{ techno.title }}</td>
+            <td>{{ techno.level }} / 5</td>
+            <td id="table-action">
+                <a href="#" class="custom-link"><i class="fas fa-pencil-alt"></i></a>
+            </td>
+        </tr>
+    {% endfor %}
+        
+    </tbody>
+</table>
+{% endblock %}
