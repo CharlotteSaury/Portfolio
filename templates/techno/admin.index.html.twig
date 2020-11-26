@@ -22,7 +22,7 @@
             <td>{{ techno.title }}</td>
             <td>{{ techno.level }} / 5</td>
             <td id="table-action">
-                <a href="#" class="custom-link"><i class="fas fa-pencil-alt"></i></a>
+                <a href="{{ path('admin.techno.edit', {id: techno.id } ) }}" class="custom-link"><i class="fas fa-pencil-alt"></i></a>
             </td>
         </tr>
     {% endfor %}

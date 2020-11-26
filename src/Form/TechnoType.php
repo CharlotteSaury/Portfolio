@@ -23,7 +23,7 @@ class TechnoType extends AbstractType
             ])
             ->add('imageFile', FileType::class, [
                 'label' => 'Image',
-                'required' => true
+                'required' => false
             ])
             ->add('level', IntegerType::class, [
                 'label' => false,
