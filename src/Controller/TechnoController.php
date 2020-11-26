@@ -35,4 +35,27 @@ class TechnoController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/admin/techno/create", name="admin.techno.create")
+     */
+    public function create(Request $request): Response
+    {
+        $techno = new Techno();
+        $form = $this->createForm(TechnoType::class, $techno);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $techno = $this->technoManager->handleCreateOrUpdate($techno);
+            $this->addFlash('success', 'La technologie a bien été ajoutée !');
+
+            return $this->redirectToRoute('admin.techno.index');
+        }
+
+        return $this->render('techno/new.html.twig', [
+            'techno' => $techno,
+            'form' => $form->createView(),
+            'dashboardnav' => 'techno.create',
+        ]);
+    }
+
 }

@@ -35,8 +35,8 @@
 					<i class="fas fa-arrow-circle-left"></i>Retour</a>
 				<a href="{{ path('admin.realization.index') }}" {% if dashboardnav is defined and dashboardnav == 'realization.index' %}class="active-dashboard-nav"{% endif %}>Réalisations</a>
 				<a href="{{ path('realization.create') }}" {% if dashboardnav is defined and dashboardnav == 'realization.create' %}class="active-dashboard-nav"{% endif %}>Nouvelle réalisation</a>
-				<a href="#">Technos</a>
-				<a href="#">Nouvelle techno</a>
+				<a href="{{ path('admin.techno.index') }}" {% if dashboardnav is defined and dashboardnav == 'techno.index' %}class="active-dashboard-nav"{% endif %}>Technos</a>
+				<a href="{{ path('admin.techno.create') }}" {% if dashboardnav is defined and dashboardnav == 'techno.create' %}class="active-dashboard-nav"{% endif %}>Nouvelle techno</a>
 			</div>
 			<div class="dashboard-page">
 				<div class="dashboard-top">

@@ -1,0 +1,21 @@
+{% extends 'dashboard.html.twig' %}
+
+{% block title %}Dashboard
+{% endblock %}
+
+{% block contenttitle %}Nouvelle techno{% endblock %}
+
+{% block body %}
+	{{ form_start(form) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.type) }}
+        {{ form_row(form.level) }}
+        {{ form_row(form.imageFile) }}
+
+        <div class="dashboard-form-submit">
+            <button type="submit" class="custom-btn">{% if action is defined and action == "edit" %}Editer{% else %}Ajouter{% endif %}</button>
+        </div>
+        
+        
+    {{ form_end(form) }}
+{% endblock %}

@@ -44,7 +44,7 @@
 					<div class="skills-card-content-text"></div>
 					<div class="skills-card-content-logo">
 						{% for techno in technos %}
-							{% if techno.type == 'language' %}
+							{% if techno.type == 'Frontend' %}
 								<div class="techno-card">
 									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
 									<div class="techno-level">
@@ -72,7 +72,7 @@
 					<div class="skills-card-content-text"></div>
 					<div class="skills-card-content-logo">
 						{% for techno in technos %}
-							{% if techno.type == 'framework' %}
+							{% if techno.type == 'Backend' %}
 								<div class="techno-card">
 									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
 									<div class="techno-level">
@@ -100,7 +100,7 @@
 					<div class="skills-card-content-text"></div>
 					<div class="skills-card-content-logo">
 						{% for techno in technos %}
-							{% if techno.type == 'tool' %}
+							{% if techno.type == 'Tools' %}
 								<div class="techno-card">
 									<img src="{{ asset('images/techno/' ~ techno.image ) }}" alt="{{ techno.title }}" width="50"/>
 									<div class="techno-level">
