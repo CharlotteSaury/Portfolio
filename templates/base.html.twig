@@ -21,9 +21,6 @@
 
 			<!-- font-awesome -->
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-			
-			<!-- aos.css -->
-			<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 		{% endblock %}
 	</head>
@@ -34,6 +31,7 @@
 				<a href="{{ path('home') }}#">Accueil</a>
 				<a href="{{ path('home') }}#aboutSection">A propos</a>
 				<a href="{{ path('home') }}#porfolioSection">Réalisations</a>
+				<a href="{{ asset('pdf/cv_saury.pdf') }}"  download="cv_saury.pdf">Mon CV</a>
 				<a href="{{ path('home') }}#contactForm">Contact</a>
 				{% if app.user %}
 					<a href="{{ path('app_logout') }}"><i class="fas fa-sign-out-alt"></i></a>
@@ -76,10 +74,6 @@
 		{% block javascripts %}
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="{{ asset('js/main.js') }}"></script>
-			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-			<script>
-				AOS.init();
-			</script>
 
 		{% endblock %}
 	</body>
