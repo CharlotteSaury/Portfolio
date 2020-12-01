@@ -14,26 +14,21 @@ class RealizationFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $faker = \Faker\Factory::create('fr_FR');
-        $images = [
-            'snowtricks.JPG',
-            'bilemo.JPG',
-            'blog.JPG',
-            'chalets.JPG'
-        ];
 
-        for ($i = 0; $i < 8; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $realization = new Realization();
-            $realization->setTitle($faker->word)
+            $realization->setTitle('realization'.$i)
                 ->setShortDesc($faker->sentence)
                 ->setDescription($faker->text)
                 ->setCreatedAt($faker->datetime)
+                ->setUpdatedAt($faker->datetime)
                 ->setContext($faker->word)
                 ->setGithub($faker->url)
                 ->setUrl($faker->url)
                 ->setDefense($faker->url)
-                ->setImage($images[mt_rand(0, 3)]);
+                ->setImage($faker->word);
 
-                for ($j = 1; $j<5; $j++) {
+                for ($j = 1; $j < 5; $j++) {
                     $realization->addTechno($this->getReference('techno'.mt_rand(0, 6)));
                 }
 

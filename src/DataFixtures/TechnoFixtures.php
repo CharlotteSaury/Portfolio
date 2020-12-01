@@ -23,9 +23,9 @@ class TechnoFixtures extends Fixture
         ];
 
         $types = [
-            'language',
-            'framework',
-            'tool'
+            'Frontend',
+            'Backend',
+            'Other'
         ];
 
         for ($i = 0; $i < count($images); $i++) {
