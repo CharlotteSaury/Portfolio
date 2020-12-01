@@ -14,6 +14,11 @@ class RealizationFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $faker = \Faker\Factory::create('fr_FR');
+        $types = [
+            'Frontend',
+            'Backend',
+            'Other'
+        ];
 
         for ($i = 0; $i < 10; $i++) {
             $realization = new Realization();
@@ -29,7 +34,7 @@ class RealizationFixtures extends Fixture implements DependentFixtureInterface
                 ->setImage($faker->word);
 
                 for ($j = 1; $j < 5; $j++) {
-                    $realization->addTechno($this->getReference('techno'.mt_rand(0, 6)));
+                    $realization->addTechno($this->getReference('techno'.mt_rand(1, 6)));
                 }
 
             $manager->persist($realization);

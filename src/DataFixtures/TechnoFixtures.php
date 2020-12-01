@@ -11,7 +11,6 @@ class TechnoFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $faker = \Faker\Factory::create('fr_FR');
         $images = [
             'html5.png',
             'css3.png',
@@ -19,26 +18,30 @@ class TechnoFixtures extends Fixture
             'symfony.png',
             'docker.png',
             'javascript.png',
-            'bootstrap.png',
         ];
 
-        $types = [
-            'Frontend',
-            'Backend',
-            'Other'
-        ];
-
-        for ($i = 0; $i < count($images); $i++) {
+        for ($i = 1 ; $i < 7; $i++) {
             $techno = new Techno();
-            $techno->setTitle($faker->word)
-                ->setImage($images[$i])
-                ->setType($types[mt_rand(0,2)])
+            $techno->setTitle('techno'.$i)
+                ->setImage($images[$i-1])
                 ->setLevel(mt_rand(2, 5));
-            
 
+            switch ($i) {
+                case ($i === 1 || $i === 2 ):
+                    $type = 'Frontend';
+                    break;
+                case ($i === 3 || $i === 4 ):
+                    $type = 'Backend';
+                    break;
+                default:
+                    $type = 'Other';            
+            }
+            $techno->setType($type);
+                
             $manager->persist($techno);
             $this->addReference('techno'.$i, $techno);
         }
+        
 
         $manager->flush();
     }
