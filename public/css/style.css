@@ -625,6 +625,7 @@ footer a {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+  	min-height: 300px;
 }
 
 .frontend-div {
@@ -654,6 +655,7 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
+  	margin-bottom: 5px;
 }
 
 .skills-card-div .skills-card-content .techno-card img {
@@ -693,6 +695,7 @@ footer a {
         width: auto;
         padding-left: 50px;
         padding-right: 50px;
+      	min-height: 0px;
     }
 
     .skills-div .skills-div-skills .backend-div {
@@ -995,7 +998,6 @@ footer a {
 }
 
 .realization-description-div ul {
-    display: inline-block;
     text-align: justify;
     list-style-type: circle;
     margin: 0;
