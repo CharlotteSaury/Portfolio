@@ -61,21 +61,25 @@ class Realization
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url
      */
     private $github;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url
      */
     private $url;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url
      */
     private $defense;
 
     /**
      * @ORM\ManyToMany(targetEntity=Techno::class, inversedBy="realizations")
+     * @Assert\Valid
      */
     private $technos;
 
@@ -98,11 +102,13 @@ class Realization
 
     /**
      * @ORM\OneToMany(targetEntity=Expectation::class, mappedBy="realization", orphanRemoval=true, cascade={"persist"})
+     * @Assert\Valid
      */
     private $expectations;
 
     /**
      * @ORM\OneToMany(targetEntity=Skill::class, mappedBy="realization", orphanRemoval=true, cascade={"persist"})
+     * @Assert\Valid
      */
     private $skills;
 

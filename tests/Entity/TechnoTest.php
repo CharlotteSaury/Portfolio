@@ -3,7 +3,6 @@
 namespace App\Tests\Entity;
 
 use App\Entity\Techno;
-use App\DataFixtures\UserFixtures;
 use App\DataFixtures\TechnoFixtures;
 use App\Tests\Utils\AssertHasErrors;
 use Liip\TestFixturesBundle\Test\FixturesTrait;
@@ -55,7 +54,7 @@ class TechnoTest extends KernelTestCase
      */
     public function testInvalidUniqueTitle()
     {
-        $this->loadFixtures([TechnoFixtures::class, UserFixtures::class]);
+        $this->loadFixtures([TechnoFixtures::class]);
         $invalidTechno = $this->getEntity();
         $invalidTechno->setTitle('techno1');
         $this->assertHasErrors($invalidTechno, 1);
