@@ -14,13 +14,8 @@ class RealizationFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $faker = \Faker\Factory::create('fr_FR');
-        $types = [
-            'Frontend',
-            'Backend',
-            'Other'
-        ];
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 1; $i < 11; $i++) {
             $realization = new Realization();
             $realization->setTitle('realization'.$i)
                 ->setShortDesc($faker->sentence)
