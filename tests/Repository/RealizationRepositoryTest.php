@@ -12,7 +12,7 @@ class RealizationRepositoryTest extends KernelTestCase
 {
     use FixturesTrait;
 
-    public function testUserFixturesNumber()
+    public function testRealizationFixturesNumber()
     {
         self::bootKernel();
         $this->loadFixtures([TechnoFixtures::class, RealizationFixtures::class]);
