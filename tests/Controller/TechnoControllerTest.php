@@ -162,4 +162,24 @@ class TechnoControllerTest extends WebTestCase
         $this->assertSame(1, $crawler->filter('div.alert-success')->count());
         $this->assertSame(1, $crawler->filter('td:contains("updated title")')->count());
     }
+
+    /**
+     * Test delete action by admin
+     *
+     * @return void
+     */
+    public function testTechnoDeletion()
+    {
+        $this->login($this->client, $this->getUser('admin@email.fr'));
+
+        $csrfToken = $this->client->getContainer()->get('security.csrf.token_manager')->getToken('techno_deletion_1');
+        $crawler = $this->client->request('POST', '/admin/techno/delete/1', [
+            '_token' => $csrfToken,
+            '_methods' => 'DELETE'
+        ]);
+        $this->assertResponseRedirects('/admin/technos');
+        $crawler = $this->client->followRedirect();
+        $this->assertSame(1, $crawler->filter('div.alert-success')->count());
+        $this->assertSame(0, $crawler->filter('td:contains("techno1")')->count());
+    }
 }
