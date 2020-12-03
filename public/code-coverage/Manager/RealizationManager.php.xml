@@ -1,0 +1,710 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="RealizationManager.php" path="/Manager">
+    <totals>
+      <lines total="74" comments="6" code="68" executable="23" executed="21" percent="91.30"/>
+      <methods count="7" tested="6" percent="85.71"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="0" percent="0.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\Manager\RealizationManager" start="9" executable="23" executed="21" crap="11.08">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="App\Manager"/>
+      <method name="__construct" signature="__construct(RealizationRepository $realizationRepository, EntityManagerInterface $entityManager)" start="21" end="25" crap="1" executable="3" executed="3" coverage="100"/>
+      <method name="findAll" signature="findAll()" start="27" end="30" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="findLast" signature="findLast(int $number)" start="32" end="35" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getPrevious" signature="getPrevious(Realization $realization)" start="37" end="44" crap="2" executable="4" executed="4" coverage="100"/>
+      <method name="getNext" signature="getNext(Realization $realization)" start="46" end="53" crap="2" executable="4" executed="4" coverage="100"/>
+      <method name="handleCreateOrUpdate" signature="handleCreateOrUpdate(Realization $realization)" start="55" end="63" crap="2" executable="5" executed="5" coverage="100"/>
+      <method name="handleRealizationDeletion" signature="handleRealizationDeletion(Realization $realization)" start="65" end="73" crap="2.26" executable="5" executed="3" coverage="60"/>
+    </class>
+    <coverage>
+      <line nr="23">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="24">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="25">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="29">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="34">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+      </line>
+      <line nr="39">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+      </line>
+      <line nr="40">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+      </line>
+      <line nr="41">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+      </line>
+      <line nr="43">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+      </line>
+      <line nr="48">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+      </line>
+      <line nr="49">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+      </line>
+      <line nr="50">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+      </line>
+      <line nr="52">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+      </line>
+      <line nr="57">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+      </line>
+      <line nr="58">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+      </line>
+      <line nr="60">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+      </line>
+      <line nr="61">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+      </line>
+      <line nr="62">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+      </line>
+      <line nr="68">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+      </line>
+      <line nr="69">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+      </line>
+      <line nr="73">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Manager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Entity</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Realization</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Repository</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">RealizationRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Doctrine</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ORM</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">EntityManagerInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8"/>
+      <line no="9">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">RealizationManager</token>
+        <token name="T_WHITESPACE"> </token>
+      </line>
+      <line no="10">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="11">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="12">
+        <token name="T_DOC_COMMENT">     * @var RealizationRepository</token>
+      </line>
+      <line no="13">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="14">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realizationRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="15"/>
+      <line no="16">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT">     * @var EntityManagerInterface</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="19">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="20"/>
+      <line no="21">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">__construct</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">RealizationRepository</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realizationRepository</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">EntityManagerInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="23">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">realizationRepository</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realizationRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="24">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="25">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="26"/>
+      <line no="27">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">findAll</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="28">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="29">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">realizationRepository</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">findBy</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'createdAt'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'DESC'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="30">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="31"/>
+      <line no="32">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">findLast</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">int</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$number</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="33">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="34">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">realizationRepository</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">findBy</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ARRAY">array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'createdAt'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'DESC'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$number</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="35">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="36"/>
+      <line no="37">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getPrevious</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Realization</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="38">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$previousRealization</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">realizationRepository</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">findOneBy</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getId</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_MINUS">-</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LNUMBER">1</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="40">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$previousRealization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="41">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$previousRealization</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="42">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="43">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="44">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="45"/>
+      <line no="46">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getNext</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Realization</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="47">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="48">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$nextRealization</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">realizationRepository</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">findOneBy</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getId</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_PLUS">+</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LNUMBER">1</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="49">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$nextRealization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="50">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$nextRealization</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="51">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="52">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="53">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="54"/>
+      <line no="55">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">handleCreateOrUpdate</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Realization</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="56">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="57">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getId</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_EQUAL">==</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="58">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">persist</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="59">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="60">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">setUpdatedAt</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">DateTime</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="61">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">flush</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="62">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="63">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="64"/>
+      <line no="65">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">handleRealizationDeletion</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Realization</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="66">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="67">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_TRY">try</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="68">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">remove</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$realization</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="69">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">flush</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="70">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CATCH">catch</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Exception</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$exception</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="71">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_THROW">throw</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$exception</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="72">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="73">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="74"/>
+      <line no="75">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+    </source>
+  </file>
+</phpunit>

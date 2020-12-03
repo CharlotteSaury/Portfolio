@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="TechnoManager.php" path="/Manager">
+    <totals>
+      <lines total="51" comments="6" code="45" executable="14" executed="12" percent="85.71"/>
+      <methods count="4" tested="3" percent="75.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="0" percent="0.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\Manager\TechnoManager" start="9" executable="14" executed="12" crap="6.1">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="App\Manager"/>
+      <method name="__construct" signature="__construct(TechnoRepository $technoRepository, EntityManagerInterface $entityManager)" start="21" end="25" crap="1" executable="3" executed="3" coverage="100"/>
+      <method name="findAll" signature="findAll()" start="27" end="30" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="handleCreateOrUpdate" signature="handleCreateOrUpdate(Techno $techno)" start="32" end="40" crap="2" executable="5" executed="5" coverage="100"/>
+      <method name="handleTechnoDeletion" signature="handleTechnoDeletion(Techno $techno)" start="42" end="50" crap="2.26" executable="5" executed="3" coverage="60"/>
+    </class>
+    <coverage>
+      <line nr="23">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="24">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="25">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="29">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="34">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+      </line>
+      <line nr="35">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+      </line>
+      <line nr="37">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+      </line>
+      <line nr="38">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+      </line>
+      <line nr="39">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+      </line>
+      <line nr="45">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="46">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="50">
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Manager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Entity</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Techno</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Repository</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">TechnoRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Doctrine</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ORM</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">EntityManagerInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8"/>
+      <line no="9">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">TechnoManager</token>
+        <token name="T_WHITESPACE"> </token>
+      </line>
+      <line no="10">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="11">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="12">
+        <token name="T_DOC_COMMENT">     * @var TechnoRepository</token>
+      </line>
+      <line no="13">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="14">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$technoRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="15"/>
+      <line no="16">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="17">
+        <token name="T_DOC_COMMENT">     * @var EntityManagerInterface</token>
+      </line>
+      <line no="18">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="19">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="20"/>
+      <line no="21">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">__construct</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">TechnoRepository</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$technoRepository</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">EntityManagerInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="23">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">technoRepository</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$technoRepository</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="24">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="25">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="26"/>
+      <line no="27">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">findAll</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="28">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="29">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">technoRepository</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">findAll</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="30">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="31"/>
+      <line no="32">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">handleCreateOrUpdate</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Techno</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$techno</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="33">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="34">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$techno</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getId</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_EQUAL">==</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="35">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">persist</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$techno</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="36">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="37">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$techno</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">setUpdatedAt</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">DateTime</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="38">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">flush</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$techno</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="40">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="41"/>
+      <line no="42">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">handleTechnoDeletion</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Techno</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$techno</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+      </line>
+      <line no="43">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="44">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_TRY">try</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="45">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">remove</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$techno</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="46">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">flush</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="47">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CATCH">catch</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Exception</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$exception</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="48">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_THROW">throw</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$exception</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="49">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="50">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="51"/>
+      <line no="52">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+    </source>
+  </file>
+</phpunit>
