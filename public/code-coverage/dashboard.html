@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var/www/portfolio/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <link href=".css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/var/www/portfolio/src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Repository/UserRepository.php.html#18">App\Repository\UserRepository</a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#21">App\Entity\Techno</a></td><td class="text-right">55%</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#12">App\Entity\Expectation</a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#12">App\Entity\Skill</a></td><td class="text-right">57%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#10">App\Controller\SecurityController</a></td><td class="text-right">75%</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#21">App\Entity\Realization</a></td><td class="text-right">77%</td></tr>
+       <tr><td><a href="Entity/Contact.php.html#7">App\Entity\Contact</a></td><td class="text-right">83%</td></tr>
+       <tr><td><a href="Manager/TechnoManager.php.html#9">App\Manager\TechnoManager</a></td><td class="text-right">85%</td></tr>
+       <tr><td><a href="Entity/User.php.html#12">App\Entity\User</a></td><td class="text-right">86%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Entity/Techno.php.html#21">App\Entity\Techno</a></td><td class="text-right">102</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#21">App\Entity\Realization</a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#12">App\Entity\Expectation</a></td><td class="text-right">15</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#12">App\Entity\Skill</a></td><td class="text-right">15</td></tr>
+       <tr><td><a href="Entity/User.php.html#12">App\Entity\User</a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#18">App\Repository\UserRepository</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Manager/TechnoManager.php.html#9">App\Manager\TechnoManager</a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/HomeController.php.html#64"><abbr title="App\Controller\HomeController::mentions">mentions</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#33"><abbr title="App\Entity\Skill::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#28"><abbr title="App\Repository\UserRepository::upgradePassword">upgradePassword</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#42"><abbr title="App\Entity\User::getEmail">getEmail</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/User.php.html#37"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#216"><abbr title="App\Entity\Techno::setImageFile">setImageFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#187"><abbr title="App\Entity\Techno::getUpdatedAt">getUpdatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#180"><abbr title="App\Entity\Techno::setCreatedAt">setCreatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#175"><abbr title="App\Entity\Techno::getCreatedAt">getCreatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#166"><abbr title="App\Entity\Techno::removeRealization">removeRealization</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#156"><abbr title="App\Entity\Techno::addRealization">addRealization</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#151"><abbr title="App\Entity\Techno::getRealizations">getRealizations</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#50"><abbr title="App\Entity\Skill::getRealization">getRealization</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#38"><abbr title="App\Entity\Skill::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#360"><abbr title="App\Entity\Realization::getUpdatedAt">getUpdatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#39"><abbr title="App\Entity\Expectation::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/SecurityController.php.html#32"><abbr title="App\Controller\SecurityController::logout">logout</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Contact.php.html#134"><abbr title="App\Entity\Contact::getCreatedAt">getCreatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Contact.php.html#144"><abbr title="App\Entity\Contact::setCreatedAt">setCreatedAt</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#34"><abbr title="App\Entity\Expectation::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#51"><abbr title="App\Entity\Expectation::getRealization">getRealization</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#222"><abbr title="App\Entity\Realization::removeTechno">removeTechno</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#295"><abbr title="App\Entity\Realization::removeExpectation">removeExpectation</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#325"><abbr title="App\Entity\Realization::removeSkill">removeSkill</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#350"><abbr title="App\Entity\Realization::setImageFile">setImageFile</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Manager/RealizationManager.php.html#65"><abbr title="App\Manager\RealizationManager::handleRealizationDeletion">handleRealizationDeletion</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="Manager/TechnoManager.php.html#42"><abbr title="App\Manager\TechnoManager::handleTechnoDeletion">handleTechnoDeletion</abbr></a></td><td class="text-right">60%</td></tr>
+       <tr><td><a href="Controller/RealizationController.php.html#118"><abbr title="App\Controller\RealizationController::delete">delete</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Controller/TechnoController.php.html#89"><abbr title="App\Controller\TechnoController::delete">delete</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#93"><abbr title="App\Security\LoginFormAuthenticator::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">66%</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#63"><abbr title="App\Security\LoginFormAuthenticator::getUser">getUser</abbr></a></td><td class="text-right">85%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Entity/Realization.php.html#325"><abbr title="App\Entity\Realization::removeSkill">removeSkill</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#295"><abbr title="App\Entity\Realization::removeExpectation">removeExpectation</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#156"><abbr title="App\Entity\Techno::addRealization">addRealization</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#50"><abbr title="App\Entity\Skill::getRealization">getRealization</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#42"><abbr title="App\Entity\User::getEmail">getEmail</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/User.php.html#37"><abbr title="App\Entity\User::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#216"><abbr title="App\Entity\Techno::setImageFile">setImageFile</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#187"><abbr title="App\Entity\Techno::getUpdatedAt">getUpdatedAt</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#175"><abbr title="App\Entity\Techno::getCreatedAt">getCreatedAt</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Techno.php.html#166"><abbr title="App\Entity\Techno::removeRealization">removeRealization</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#38"><abbr title="App\Entity\Skill::getDescription">getDescription</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Repository/UserRepository.php.html#28"><abbr title="App\Repository\UserRepository::upgradePassword">upgradePassword</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Skill.php.html#33"><abbr title="App\Entity\Skill::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#360"><abbr title="App\Entity\Realization::getUpdatedAt">getUpdatedAt</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Realization.php.html#350"><abbr title="App\Entity\Realization::setImageFile">setImageFile</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#51"><abbr title="App\Entity\Expectation::getRealization">getRealization</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#39"><abbr title="App\Entity\Expectation::getDescription">getDescription</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Entity/Expectation.php.html#34"><abbr title="App\Entity\Expectation::getId">getId</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#63"><abbr title="App\Security\LoginFormAuthenticator::getUser">getUser</abbr></a></td><td class="text-right">3</td></tr>
+       <tr><td><a href="Manager/RealizationManager.php.html#65"><abbr title="App\Manager\RealizationManager::handleRealizationDeletion">handleRealizationDeletion</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Manager/TechnoManager.php.html#42"><abbr title="App\Manager\TechnoManager::handleTechnoDeletion">handleTechnoDeletion</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Controller/RealizationController.php.html#118"><abbr title="App\Controller\RealizationController::delete">delete</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Controller/TechnoController.php.html#89"><abbr title="App\Controller\TechnoController::delete">delete</abbr></a></td><td class="text-right">2</td></tr>
+       <tr><td><a href="Security/LoginFormAuthenticator.php.html#93"><abbr title="App\Security\LoginFormAuthenticator::onAuthenticationSuccess">onAuthenticationSuccess</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 6.1.4</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.12</a> with <a href="https://xdebug.org/">Xdebug 2.8.1</a> and <a href="https://phpunit.de/">PHPUnit 7.5.20</a> at Thu Dec 3 8:55:29 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([0,0,0,1,0,0,3,0,2,3,5,16], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([25,0,0,0,0,0,0,5,0,1,0,120], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[94.44444444444444,5,"<a href=\"Controller\/HomeController.php.html#15\">App\\Controller\\HomeController<\/a>"],[95.34883720930233,12,"<a href=\"Controller\/RealizationController.php.html#13\">App\\Controller\\RealizationController<\/a>"],[75,2,"<a href=\"Controller\/SecurityController.php.html#10\">App\\Controller\\SecurityController<\/a>"],[93.93939393939394,10,"<a href=\"Controller\/TechnoController.php.html#13\">App\\Controller\\TechnoController<\/a>"],[100,3,"<a href=\"DataFixtures\/ExpectationFixtures.php.html#12\">App\\DataFixtures\\ExpectationFixtures<\/a>"],[100,4,"<a href=\"DataFixtures\/RealizationFixtures.php.html#12\">App\\DataFixtures\\RealizationFixtures<\/a>"],[100,3,"<a href=\"DataFixtures\/SkillFixtures.php.html#12\">App\\DataFixtures\\SkillFixtures<\/a>"],[100,6,"<a href=\"DataFixtures\/TechnoFixtures.php.html#10\">App\\DataFixtures\\TechnoFixtures<\/a>"],[100,2,"<a href=\"DataFixtures\/UserFixtures.php.html#11\">App\\DataFixtures\\UserFixtures<\/a>"],[83.33333333333334,12,"<a href=\"Entity\/Contact.php.html#7\">App\\Entity\\Contact<\/a>"],[57.14285714285714,9,"<a href=\"Entity\/Expectation.php.html#12\">App\\Entity\\Expectation<\/a>"],[77.27272727272727,55,"<a href=\"Entity\/Realization.php.html#21\">App\\Entity\\Realization<\/a>"],[57.14285714285714,9,"<a href=\"Entity\/Skill.php.html#12\">App\\Entity\\Skill<\/a>"],[55.55555555555556,29,"<a href=\"Entity\/Techno.php.html#21\">App\\Entity\\Techno<\/a>"],[86.66666666666667,12,"<a href=\"Entity\/User.php.html#12\">App\\Entity\\User<\/a>"],[100,2,"<a href=\"Form\/ContactType.php.html#14\">App\\Form\\ContactType<\/a>"],[100,2,"<a href=\"Form\/ExpectationType.php.html#11\">App\\Form\\ExpectationType<\/a>"],[100,2,"<a href=\"Form\/RealizationType.php.html#20\">App\\Form\\RealizationType<\/a>"],[100,2,"<a href=\"Form\/SkillType.php.html#11\">App\\Form\\SkillType<\/a>"],[100,2,"<a href=\"Form\/TechnoType.php.html#13\">App\\Form\\TechnoType<\/a>"],[100,3,"<a href=\"Helper\/MailSenderHelper.php.html#12\">App\\Helper\\MailSenderHelper<\/a>"],[100,2,"<a href=\"Manager\/ContactManager.php.html#9\">App\\Manager\\ContactManager<\/a>"],[91.30434782608695,11,"<a href=\"Manager\/RealizationManager.php.html#9\">App\\Manager\\RealizationManager<\/a>"],[85.71428571428571,6,"<a href=\"Manager\/TechnoManager.php.html#9\">App\\Manager\\TechnoManager<\/a>"],[100,1,"<a href=\"Repository\/ExpectationRepository.php.html#15\">App\\Repository\\ExpectationRepository<\/a>"],[100,1,"<a href=\"Repository\/RealizationRepository.php.html#15\">App\\Repository\\RealizationRepository<\/a>"],[100,1,"<a href=\"Repository\/SkillRepository.php.html#15\">App\\Repository\\SkillRepository<\/a>"],[100,1,"<a href=\"Repository\/TechnoRepository.php.html#15\">App\\Repository\\TechnoRepository<\/a>"],[25,3,"<a href=\"Repository\/UserRepository.php.html#18\">App\\Repository\\UserRepository<\/a>"],[92.5925925925926,13,"<a href=\"Security\/LoginFormAuthenticator.php.html#23\">App\\Security\\LoginFormAuthenticator<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Controller\/HomeController.php.html#27\">App\\Controller\\HomeController::__construct<\/a>"],[100,3,"<a href=\"Controller\/HomeController.php.html#36\">App\\Controller\\HomeController::index<\/a>"],[0,1,"<a href=\"Controller\/HomeController.php.html#64\">App\\Controller\\HomeController::mentions<\/a>"],[100,1,"<a href=\"Controller\/RealizationController.php.html#20\">App\\Controller\\RealizationController::__construct<\/a>"],[100,1,"<a href=\"Controller\/RealizationController.php.html#28\">App\\Controller\\RealizationController::index<\/a>"],[100,1,"<a href=\"Controller\/RealizationController.php.html#40\">App\\Controller\\RealizationController::show<\/a>"],[100,1,"<a href=\"Controller\/RealizationController.php.html#55\">App\\Controller\\RealizationController::adminIndex<\/a>"],[100,3,"<a href=\"Controller\/RealizationController.php.html#68\">App\\Controller\\RealizationController::create<\/a>"],[100,3,"<a href=\"Controller\/RealizationController.php.html#93\">App\\Controller\\RealizationController::edit<\/a>"],[66.66666666666666,2,"<a href=\"Controller\/RealizationController.php.html#118\">App\\Controller\\RealizationController::delete<\/a>"],[100,1,"<a href=\"Controller\/SecurityController.php.html#15\">App\\Controller\\SecurityController::login<\/a>"],[0,1,"<a href=\"Controller\/SecurityController.php.html#32\">App\\Controller\\SecurityController::logout<\/a>"],[100,1,"<a href=\"Controller\/TechnoController.php.html#20\">App\\Controller\\TechnoController::__construct<\/a>"],[100,1,"<a href=\"Controller\/TechnoController.php.html#28\">App\\Controller\\TechnoController::adminIndex<\/a>"],[100,3,"<a href=\"Controller\/TechnoController.php.html#41\">App\\Controller\\TechnoController::create<\/a>"],[100,3,"<a href=\"Controller\/TechnoController.php.html#64\">App\\Controller\\TechnoController::edit<\/a>"],[66.66666666666666,2,"<a href=\"Controller\/TechnoController.php.html#89\">App\\Controller\\TechnoController::delete<\/a>"],[100,2,"<a href=\"DataFixtures\/ExpectationFixtures.php.html#14\">App\\DataFixtures\\ExpectationFixtures::load<\/a>"],[100,1,"<a href=\"DataFixtures\/ExpectationFixtures.php.html#29\">App\\DataFixtures\\ExpectationFixtures::getDependencies<\/a>"],[100,3,"<a href=\"DataFixtures\/RealizationFixtures.php.html#14\">App\\DataFixtures\\RealizationFixtures::load<\/a>"],[100,1,"<a href=\"DataFixtures\/RealizationFixtures.php.html#41\">App\\DataFixtures\\RealizationFixtures::getDependencies<\/a>"],[100,2,"<a href=\"DataFixtures\/SkillFixtures.php.html#14\">App\\DataFixtures\\SkillFixtures::load<\/a>"],[100,1,"<a href=\"DataFixtures\/SkillFixtures.php.html#29\">App\\DataFixtures\\SkillFixtures::getDependencies<\/a>"],[100,6,"<a href=\"DataFixtures\/TechnoFixtures.php.html#12\">App\\DataFixtures\\TechnoFixtures::load<\/a>"],[100,1,"<a href=\"DataFixtures\/UserFixtures.php.html#18\">App\\DataFixtures\\UserFixtures::__construct<\/a>"],[100,1,"<a href=\"DataFixtures\/UserFixtures.php.html#23\">App\\DataFixtures\\UserFixtures::load<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#54\">App\\Entity\\Contact::getName<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#64\">App\\Entity\\Contact::setName<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#74\">App\\Entity\\Contact::getEmail<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#84\">App\\Entity\\Contact::setEmail<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#94\">App\\Entity\\Contact::getSubject<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#104\">App\\Entity\\Contact::setSubject<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#114\">App\\Entity\\Contact::getContent<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#124\">App\\Entity\\Contact::setContent<\/a>"],[0,1,"<a href=\"Entity\/Contact.php.html#134\">App\\Entity\\Contact::getCreatedAt<\/a>"],[0,1,"<a href=\"Entity\/Contact.php.html#144\">App\\Entity\\Contact::setCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#156\">App\\Entity\\Contact::getPersonalData<\/a>"],[100,1,"<a href=\"Entity\/Contact.php.html#168\">App\\Entity\\Contact::setPersonalData<\/a>"],[0,2,"<a href=\"Entity\/Expectation.php.html#34\">App\\Entity\\Expectation::getId<\/a>"],[0,2,"<a href=\"Entity\/Expectation.php.html#39\">App\\Entity\\Expectation::getDescription<\/a>"],[100,1,"<a href=\"Entity\/Expectation.php.html#44\">App\\Entity\\Expectation::setDescription<\/a>"],[0,2,"<a href=\"Entity\/Expectation.php.html#51\">App\\Entity\\Expectation::getRealization<\/a>"],[100,2,"<a href=\"Entity\/Expectation.php.html#56\">App\\Entity\\Expectation::setRealization<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#120\">App\\Entity\\Realization::__construct<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#128\">App\\Entity\\Realization::getId<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#133\">App\\Entity\\Realization::getTitle<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#138\">App\\Entity\\Realization::setTitle<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#145\">App\\Entity\\Realization::getShortDesc<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#150\">App\\Entity\\Realization::setShortDesc<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#157\">App\\Entity\\Realization::getDescription<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#162\">App\\Entity\\Realization::setDescription<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#169\">App\\Entity\\Realization::getContext<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#174\">App\\Entity\\Realization::setContext<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#181\">App\\Entity\\Realization::getGithub<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#186\">App\\Entity\\Realization::setGithub<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#193\">App\\Entity\\Realization::getUrl<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#198\">App\\Entity\\Realization::setUrl<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#208\">App\\Entity\\Realization::getTechnos<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#213\">App\\Entity\\Realization::addTechno<\/a>"],[0,1,"<a href=\"Entity\/Realization.php.html#222\">App\\Entity\\Realization::removeTechno<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#229\">App\\Entity\\Realization::getDefense<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#234\">App\\Entity\\Realization::setDefense<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#241\">App\\Entity\\Realization::getCreatedAt<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#246\">App\\Entity\\Realization::setCreatedAt<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#256\">App\\Entity\\Realization::getImage<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#265\">App\\Entity\\Realization::setImage<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#272\">App\\Entity\\Realization::getSlug<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#280\">App\\Entity\\Realization::getExpectations<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#285\">App\\Entity\\Realization::addExpectation<\/a>"],[0,3,"<a href=\"Entity\/Realization.php.html#295\">App\\Entity\\Realization::removeExpectation<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#310\">App\\Entity\\Realization::getSkills<\/a>"],[100,2,"<a href=\"Entity\/Realization.php.html#315\">App\\Entity\\Realization::addSkill<\/a>"],[0,3,"<a href=\"Entity\/Realization.php.html#325\">App\\Entity\\Realization::removeSkill<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#340\">App\\Entity\\Realization::getImageFile<\/a>"],[0,2,"<a href=\"Entity\/Realization.php.html#350\">App\\Entity\\Realization::setImageFile<\/a>"],[0,2,"<a href=\"Entity\/Realization.php.html#360\">App\\Entity\\Realization::getUpdatedAt<\/a>"],[100,1,"<a href=\"Entity\/Realization.php.html#365\">App\\Entity\\Realization::setUpdatedAt<\/a>"],[0,2,"<a href=\"Entity\/Skill.php.html#33\">App\\Entity\\Skill::getId<\/a>"],[0,2,"<a href=\"Entity\/Skill.php.html#38\">App\\Entity\\Skill::getDescription<\/a>"],[100,1,"<a href=\"Entity\/Skill.php.html#43\">App\\Entity\\Skill::setDescription<\/a>"],[0,2,"<a href=\"Entity\/Skill.php.html#50\">App\\Entity\\Skill::getRealization<\/a>"],[100,2,"<a href=\"Entity\/Skill.php.html#55\">App\\Entity\\Skill::setRealization<\/a>"],[100,1,"<a href=\"Entity\/Techno.php.html#81\">App\\Entity\\Techno::__construct<\/a>"],[100,2,"<a href=\"Entity\/Techno.php.html#88\">App\\Entity\\Techno::getId<\/a>"],[100,2,"<a href=\"Entity\/Techno.php.html#93\">App\\Entity\\Techno::getTitle<\/a>"],[100,1,"<a href=\"Entity\/Techno.php.html#98\">App\\Entity\\Techno::setTitle<\/a>"],[100,2,"<a href=\"Entity\/Techno.php.html#108\">App\\Entity\\Techno::getImage<\/a>"],[100,1,"<a href=\"Entity\/Techno.php.html#117\">App\\Entity\\Techno::setImage<\/a>"],[100,2,"<a href=\"Entity\/Techno.php.html#124\">App\\Entity\\Techno::getLevel<\/a>"],[100,1,"<a href=\"Entity\/Techno.php.html#129\">App\\Entity\\Techno::setLevel<\/a>"],[100,2,"<a href=\"Entity\/Techno.php.html#136\">App\\Entity\\Techno::getType<\/a>"],[100,1,"<a href=\"Entity\/Techno.php.html#141\">App\\Entity\\Techno::setType<\/a>"],[0,1,"<a href=\"Entity\/Techno.php.html#151\">App\\Entity\\Techno::getRealizations<\/a>"],[0,2,"<a href=\"Entity\/Techno.php.html#156\">App\\Entity\\Techno::addRealization<\/a>"],[0,2,"<a href=\"Entity\/Techno.php.html#166\">App\\Entity\\Techno::removeRealization<\/a>"],[0,2,"<a href=\"Entity\/Techno.php.html#175\">App\\Entity\\Techno::getCreatedAt<\/a>"],[0,1,"<a href=\"Entity\/Techno.php.html#180\">App\\Entity\\Techno::setCreatedAt<\/a>"],[0,2,"<a href=\"Entity\/Techno.php.html#187\">App\\Entity\\Techno::getUpdatedAt<\/a>"],[100,1,"<a href=\"Entity\/Techno.php.html#192\">App\\Entity\\Techno::setUpdatedAt<\/a>"],[100,1,"<a href=\"Entity\/Techno.php.html#204\">App\\Entity\\Techno::getImageFile<\/a>"],[0,2,"<a href=\"Entity\/Techno.php.html#216\">App\\Entity\\Techno::setImageFile<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#37\">App\\Entity\\User::getId<\/a>"],[0,2,"<a href=\"Entity\/User.php.html#42\">App\\Entity\\User::getEmail<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#47\">App\\Entity\\User::setEmail<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#59\">App\\Entity\\User::getUsername<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#67\">App\\Entity\\User::getRoles<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#76\">App\\Entity\\User::setRoles<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#86\">App\\Entity\\User::getPassword<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#91\">App\\Entity\\User::setPassword<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#101\">App\\Entity\\User::getSalt<\/a>"],[100,1,"<a href=\"Entity\/User.php.html#109\">App\\Entity\\User::eraseCredentials<\/a>"],[100,1,"<a href=\"Form\/ContactType.php.html#16\">App\\Form\\ContactType::buildForm<\/a>"],[100,1,"<a href=\"Form\/ContactType.php.html#54\">App\\Form\\ContactType::configureOptions<\/a>"],[100,1,"<a href=\"Form\/ExpectationType.php.html#13\">App\\Form\\ExpectationType::buildForm<\/a>"],[100,1,"<a href=\"Form\/ExpectationType.php.html#22\">App\\Form\\ExpectationType::configureOptions<\/a>"],[100,1,"<a href=\"Form\/RealizationType.php.html#22\">App\\Form\\RealizationType::buildForm<\/a>"],[100,1,"<a href=\"Form\/RealizationType.php.html#105\">App\\Form\\RealizationType::configureOptions<\/a>"],[100,1,"<a href=\"Form\/SkillType.php.html#13\">App\\Form\\SkillType::buildForm<\/a>"],[100,1,"<a href=\"Form\/SkillType.php.html#22\">App\\Form\\SkillType::configureOptions<\/a>"],[100,1,"<a href=\"Form\/TechnoType.php.html#15\">App\\Form\\TechnoType::buildForm<\/a>"],[100,1,"<a href=\"Form\/TechnoType.php.html#43\">App\\Form\\TechnoType::configureOptions<\/a>"],[100,1,"<a href=\"Helper\/MailSenderHelper.php.html#19\">App\\Helper\\MailSenderHelper::__construct<\/a>"],[100,1,"<a href=\"Helper\/MailSenderHelper.php.html#29\">App\\Helper\\MailSenderHelper::sendMail<\/a>"],[100,1,"<a href=\"Helper\/MailSenderHelper.php.html#45\">App\\Helper\\MailSenderHelper::sendNotification<\/a>"],[100,1,"<a href=\"Manager\/ContactManager.php.html#15\">App\\Manager\\ContactManager::__construct<\/a>"],[100,1,"<a href=\"Manager\/ContactManager.php.html#20\">App\\Manager\\ContactManager::handleContactForm<\/a>"],[100,1,"<a href=\"Manager\/RealizationManager.php.html#21\">App\\Manager\\RealizationManager::__construct<\/a>"],[100,1,"<a href=\"Manager\/RealizationManager.php.html#27\">App\\Manager\\RealizationManager::findAll<\/a>"],[100,1,"<a href=\"Manager\/RealizationManager.php.html#32\">App\\Manager\\RealizationManager::findLast<\/a>"],[100,2,"<a href=\"Manager\/RealizationManager.php.html#37\">App\\Manager\\RealizationManager::getPrevious<\/a>"],[100,2,"<a href=\"Manager\/RealizationManager.php.html#46\">App\\Manager\\RealizationManager::getNext<\/a>"],[100,2,"<a href=\"Manager\/RealizationManager.php.html#55\">App\\Manager\\RealizationManager::handleCreateOrUpdate<\/a>"],[60,2,"<a href=\"Manager\/RealizationManager.php.html#65\">App\\Manager\\RealizationManager::handleRealizationDeletion<\/a>"],[100,1,"<a href=\"Manager\/TechnoManager.php.html#21\">App\\Manager\\TechnoManager::__construct<\/a>"],[100,1,"<a href=\"Manager\/TechnoManager.php.html#27\">App\\Manager\\TechnoManager::findAll<\/a>"],[100,2,"<a href=\"Manager\/TechnoManager.php.html#32\">App\\Manager\\TechnoManager::handleCreateOrUpdate<\/a>"],[60,2,"<a href=\"Manager\/TechnoManager.php.html#42\">App\\Manager\\TechnoManager::handleTechnoDeletion<\/a>"],[100,1,"<a href=\"Repository\/ExpectationRepository.php.html#17\">App\\Repository\\ExpectationRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/RealizationRepository.php.html#17\">App\\Repository\\RealizationRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/SkillRepository.php.html#17\">App\\Repository\\SkillRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/TechnoRepository.php.html#17\">App\\Repository\\TechnoRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/UserRepository.php.html#20\">App\\Repository\\UserRepository::__construct<\/a>"],[0,2,"<a href=\"Repository\/UserRepository.php.html#28\">App\\Repository\\UserRepository::upgradePassword<\/a>"],[100,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#34\">App\\Security\\LoginFormAuthenticator::__construct<\/a>"],[100,2,"<a href=\"Security\/LoginFormAuthenticator.php.html#42\">App\\Security\\LoginFormAuthenticator::supports<\/a>"],[100,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#48\">App\\Security\\LoginFormAuthenticator::getCredentials<\/a>"],[85.71428571428571,3,"<a href=\"Security\/LoginFormAuthenticator.php.html#63\">App\\Security\\LoginFormAuthenticator::getUser<\/a>"],[100,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#80\">App\\Security\\LoginFormAuthenticator::checkCredentials<\/a>"],[100,2,"<a href=\"Security\/LoginFormAuthenticator.php.html#88\">App\\Security\\LoginFormAuthenticator::getPassword<\/a>"],[66.66666666666666,2,"<a href=\"Security\/LoginFormAuthenticator.php.html#93\">App\\Security\\LoginFormAuthenticator::onAuthenticationSuccess<\/a>"],[100,1,"<a href=\"Security\/LoginFormAuthenticator.php.html#102\">App\\Security\\LoginFormAuthenticator::getLoginUrl<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

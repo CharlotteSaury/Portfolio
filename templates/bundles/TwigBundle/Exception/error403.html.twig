@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Error
+{% endblock %}
+
+
+{% block body %}
+	<div class="home-header">
+		<div class="home-title-div">
+			<h1>Ooops</h1>
+			<h2>Vous n'avez pas accès à cette page, merci de vous <a class="custom-link" href="{{ path('login') }}">connecter</a></h2>
+		</div>
+	</div>
+    
+{% endblock %}

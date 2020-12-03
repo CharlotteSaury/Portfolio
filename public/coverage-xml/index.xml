@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <build time="Thu Dec 3 9:47:07 GMT+0000 2020" phpunit="7.5.20" coverage="6.1.4">
+    <runtime name="PHP" version="7.4.12" url="https://secure.php.net/"/>
+    <driver name="xdebug" version="2.8.1"/>
+  </build>
+  <project source="/var/www/portfolio/src">
+    <tests>
+      <test name="App\Tests\Controller\HomeControllerTest::testIndex" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\HomeControllerTest::testIndexIntegration" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\HomeControllerTest::testContactSubmit" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testRealizationCreation" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testRealizationEdition" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\SecurityControllerTest::testLoginPage" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\SecurityControllerTest::testLogout" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testTechnoCreation" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testTechnoEdition" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Entity\RealizationTest::testValidRealizationEntity" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Entity\RealizationTest::testInvalidRealizationEntity" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Entity\RealizationTest::testInvalidRealizationUniqueTitle" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Entity\TechnoTest::testValidTechnoEntity" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Entity\TechnoTest::testInvalidTechnoEntity" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Entity\TechnoTest::testInvalidUniqueTitle" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Repository\RealizationRepositoryTest::testRealizationFixturesNumber" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Repository\SkillRepositoryTest::testSkillFixturesNumber" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Repository\TechnoRepositoryTest::testTechnoFixturesNumber" size="unknown" result="0" status="PASSED"/>
+      <test name="App\Tests\Repository\UserRepositoryTest::testUserFixturesNumber" size="unknown" result="0" status="PASSED"/>
+    </tests>
+    <directory name="/">
+      <totals>
+        <lines total="2400" comments="609" code="1791" executable="483" executed="423" percent="87.58"/>
+        <methods count="151" tested="120" percent="79.47"/>
+        <functions count="0" tested="0" percent="0"/>
+        <classes count="30" tested="16" percent="53.33"/>
+        <traits count="0" tested="0" percent="0"/>
+      </totals>
+      <directory name="Controller">
+        <totals>
+          <lines total="338" comments="70" code="268" executable="98" executed="92" percent="93.88"/>
+          <methods count="17" tested="13" percent="76.47"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="4" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="HomeController.php" href="Controller/HomeController.php.xml">
+          <totals>
+            <lines total="68" comments="12" code="56" executable="18" executed="17" percent="94.44"/>
+            <methods count="3" tested="2" percent="66.67"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="RealizationController.php" href="Controller/RealizationController.php.xml">
+          <totals>
+            <lines total="131" comments="23" code="108" executable="43" executed="41" percent="95.35"/>
+            <methods count="7" tested="6" percent="85.71"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="SecurityController.php" href="Controller/SecurityController.php.xml">
+          <totals>
+            <lines total="36" comments="18" code="18" executable="4" executed="3" percent="75.00"/>
+            <methods count="2" tested="1" percent="50.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="TechnoController.php" href="Controller/TechnoController.php.xml">
+          <totals>
+            <lines total="103" comments="17" code="86" executable="33" executed="31" percent="93.94"/>
+            <methods count="5" tested="4" percent="80.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="DataFixtures">
+        <totals>
+          <lines total="200" comments="3" code="197" executable="66" executed="66" percent="100.00"/>
+          <methods count="9" tested="9" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="5" tested="5" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="ExpectationFixtures.php" href="DataFixtures/ExpectationFixtures.php.xml">
+          <totals>
+            <lines total="35" comments="0" code="35" executable="9" executed="9" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="RealizationFixtures.php" href="DataFixtures/RealizationFixtures.php.xml">
+          <totals>
+            <lines total="47" comments="0" code="47" executable="20" executed="20" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="SkillFixtures.php" href="DataFixtures/SkillFixtures.php.xml">
+          <totals>
+            <lines total="35" comments="0" code="35" executable="9" executed="9" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="TechnoFixtures.php" href="DataFixtures/TechnoFixtures.php.xml">
+          <totals>
+            <lines total="48" comments="0" code="48" executable="18" executed="18" percent="100.00"/>
+            <methods count="1" tested="1" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="UserFixtures.php" href="DataFixtures/UserFixtures.php.xml">
+          <totals>
+            <lines total="35" comments="3" code="32" executable="10" executed="10" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Entity">
+        <totals>
+          <lines total="1006" comments="323" code="683" executable="149" executed="107" percent="71.81"/>
+          <methods count="85" tested="63" percent="74.12"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="6" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="Contact.php" href="Entity/Contact.php.xml">
+          <totals>
+            <lines total="173" comments="81" code="92" executable="18" executed="15" percent="83.33"/>
+            <methods count="12" tested="10" percent="83.33"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="Expectation.php" href="Entity/Expectation.php.xml">
+          <totals>
+            <lines total="62" comments="16" code="46" executable="7" executed="4" percent="57.14"/>
+            <methods count="5" tested="2" percent="40.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="Realization.php" href="Entity/Realization.php.xml">
+          <totals>
+            <lines total="371" comments="100" code="271" executable="66" executed="51" percent="77.27"/>
+            <methods count="34" tested="29" percent="85.29"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="Skill.php" href="Entity/Skill.php.xml">
+          <totals>
+            <lines total="61" comments="16" code="45" executable="7" executed="4" percent="57.14"/>
+            <methods count="5" tested="2" percent="40.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="Techno.php" href="Entity/Techno.php.xml">
+          <totals>
+            <lines total="225" comments="67" code="158" executable="36" executed="20" percent="55.56"/>
+            <methods count="19" tested="12" percent="63.16"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="User.php" href="Entity/User.php.xml">
+          <totals>
+            <lines total="114" comments="43" code="71" executable="15" executed="13" percent="86.67"/>
+            <methods count="10" tested="8" percent="80.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Form">
+        <totals>
+          <lines total="276" comments="0" code="276" executable="66" executed="66" percent="100.00"/>
+          <methods count="10" tested="10" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="5" tested="5" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="ContactType.php" href="Form/ContactType.php.xml">
+          <totals>
+            <lines total="60" comments="0" code="60" executable="14" executed="14" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="ExpectationType.php" href="Form/ExpectationType.php.xml">
+          <totals>
+            <lines total="28" comments="0" code="28" executable="6" executed="6" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="RealizationType.php" href="Form/RealizationType.php.xml">
+          <totals>
+            <lines total="111" comments="0" code="111" executable="28" executed="28" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="SkillType.php" href="Form/SkillType.php.xml">
+          <totals>
+            <lines total="28" comments="0" code="28" executable="6" executed="6" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="TechnoType.php" href="Form/TechnoType.php.xml">
+          <totals>
+            <lines total="49" comments="0" code="49" executable="12" executed="12" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Helper">
+        <totals>
+          <lines total="58" comments="13" code="45" executable="18" executed="18" percent="100.00"/>
+          <methods count="3" tested="3" percent="100.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="1" percent="100.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="MailSenderHelper.php" href="Helper/MailSenderHelper.php.xml">
+          <totals>
+            <lines total="58" comments="13" code="45" executable="18" executed="18" percent="100.00"/>
+            <methods count="3" tested="3" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Manager">
+        <totals>
+          <lines total="149" comments="12" code="137" executable="43" executed="39" percent="90.70"/>
+          <methods count="13" tested="11" percent="84.62"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="3" tested="1" percent="33.33"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="ContactManager.php" href="Manager/ContactManager.php.xml">
+          <totals>
+            <lines total="24" comments="0" code="24" executable="6" executed="6" percent="100.00"/>
+            <methods count="2" tested="2" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="RealizationManager.php" href="Manager/RealizationManager.php.xml">
+          <totals>
+            <lines total="74" comments="6" code="68" executable="23" executed="21" percent="91.30"/>
+            <methods count="7" tested="6" percent="85.71"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="TechnoManager.php" href="Manager/TechnoManager.php.xml">
+          <totals>
+            <lines total="51" comments="6" code="45" executable="14" executed="12" percent="85.71"/>
+            <methods count="4" tested="3" percent="75.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Repository">
+        <totals>
+          <lines total="267" comments="183" code="84" executable="16" executed="10" percent="62.50"/>
+          <methods count="6" tested="5" percent="83.33"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="5" tested="4" percent="80.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="ExpectationRepository.php" href="Repository/ExpectationRepository.php.xml">
+          <totals>
+            <lines total="50" comments="36" code="14" executable="2" executed="2" percent="100.00"/>
+            <methods count="1" tested="1" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="RealizationRepository.php" href="Repository/RealizationRepository.php.xml">
+          <totals>
+            <lines total="50" comments="36" code="14" executable="2" executed="2" percent="100.00"/>
+            <methods count="1" tested="1" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="SkillRepository.php" href="Repository/SkillRepository.php.xml">
+          <totals>
+            <lines total="50" comments="36" code="14" executable="2" executed="2" percent="100.00"/>
+            <methods count="1" tested="1" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="TechnoRepository.php" href="Repository/TechnoRepository.php.xml">
+          <totals>
+            <lines total="50" comments="36" code="14" executable="2" executed="2" percent="100.00"/>
+            <methods count="1" tested="1" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="UserRepository.php" href="Repository/UserRepository.php.xml">
+          <totals>
+            <lines total="67" comments="39" code="28" executable="8" executed="2" percent="25.00"/>
+            <methods count="2" tested="1" percent="50.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Security">
+        <totals>
+          <lines total="106" comments="5" code="101" executable="27" executed="25" percent="92.59"/>
+          <methods count="8" tested="6" percent="75.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="LoginFormAuthenticator.php" href="Security/LoginFormAuthenticator.php.xml">
+          <totals>
+            <lines total="106" comments="5" code="101" executable="27" executed="25" percent="92.59"/>
+            <methods count="8" tested="6" percent="75.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+    </directory>
+  </project>
+</phpunit>

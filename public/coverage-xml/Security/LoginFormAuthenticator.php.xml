@@ -1,0 +1,1284 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="LoginFormAuthenticator.php" path="/Security">
+    <totals>
+      <lines total="106" comments="5" code="101" executable="27" executed="25" percent="92.59"/>
+      <methods count="8" tested="6" percent="75.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="0" percent="0.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\Security\LoginFormAuthenticator" start="23" executable="27" executed="25" crap="13.07">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="App\Security"/>
+      <method name="__construct" signature="__construct(EntityManagerInterface $entityManager, UrlGeneratorInterface $urlGenerator, CsrfTokenManagerInterface $csrfTokenManager, UserPasswordEncoderInterface $passwordEncoder)" start="34" end="40" crap="1" executable="5" executed="5" coverage="100"/>
+      <method name="supports" signature="supports(Request $request)" start="42" end="46" crap="2" executable="2" executed="2" coverage="100"/>
+      <method name="getCredentials" signature="getCredentials(Request $request)" start="48" end="61" crap="1" executable="7" executed="7" coverage="100"/>
+      <method name="getUser" signature="getUser($credentials, UserProviderInterface $userProvider)" start="63" end="78" crap="3.03" executable="7" executed="6" coverage="85.714285714286"/>
+      <method name="checkCredentials" signature="checkCredentials($credentials, UserInterface $user)" start="80" end="83" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getPassword" signature="getPassword($credentials): ?string" start="88" end="91" crap="2" executable="1" executed="1" coverage="100"/>
+      <method name="onAuthenticationSuccess" signature="onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey)" start="93" end="100" crap="2.15" executable="3" executed="2" coverage="66.666666666667"/>
+      <method name="getLoginUrl" signature="getLoginUrl()" start="102" end="105" crap="1" executable="1" executed="1" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="36">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="37">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="38">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="39">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="40">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="44">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="45">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+      </line>
+      <line nr="51">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="52">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="53">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="55">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="56">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="57">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="60">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="65">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="66">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="70">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="72">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="74">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+      </line>
+      <line nr="77">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="82">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="90">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="95">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="99">
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+      </line>
+      <line nr="104">
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Entity</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">User</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Doctrine</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ORM</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">EntityManagerInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">HttpFoundation</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">RedirectResponse</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">HttpFoundation</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Request</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="9">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Routing</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Generator</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">UrlGeneratorInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="10">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Core</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Authentication</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Token</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">TokenInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="11">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Core</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Encoder</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">UserPasswordEncoderInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="12">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Core</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Exception</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">CustomUserMessageAuthenticationException</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="13">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Core</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Exception</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">InvalidCsrfTokenException</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="14">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Core</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="15">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Core</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">User</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">UserInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="16">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Core</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">User</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">UserProviderInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="17">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Csrf</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">CsrfToken</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="18">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Csrf</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">CsrfTokenManagerInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="19">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Guard</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Authenticator</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">AbstractFormLoginAuthenticator</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="20">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Guard</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">PasswordAuthenticatedInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="21">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Symfony</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Component</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Security</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Http</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Util</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">TargetPathTrait</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="22"/>
+      <line no="23">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">LoginFormAuthenticator</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXTENDS">extends</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">AbstractFormLoginAuthenticator</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IMPLEMENTS">implements</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">PasswordAuthenticatedInterface</token>
+      </line>
+      <line no="24">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="25">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">TargetPathTrait</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="26"/>
+      <line no="27">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONST">const</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">LOGIN_ROUTE</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'app_login'</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="28"/>
+      <line no="29">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="30">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$urlGenerator</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="31">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$csrfTokenManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="32">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PRIVATE">private</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$passwordEncoder</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="33"/>
+      <line no="34">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">__construct</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">EntityManagerInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UrlGeneratorInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$urlGenerator</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">CsrfTokenManagerInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$csrfTokenManager</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserPasswordEncoderInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$passwordEncoder</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="35">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="36">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entityManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="37">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">urlGenerator</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$urlGenerator</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="38">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">csrfTokenManager</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$csrfTokenManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">passwordEncoder</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$passwordEncoder</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="40">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="41"/>
+      <line no="42">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">supports</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Request</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="43">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="44">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">self</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">LOGIN_ROUTE</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_IDENTICAL">===</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">attributes</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">get</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'_route'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="45">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">isMethod</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'POST'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="46">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="47"/>
+      <line no="48">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getCredentials</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Request</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="49">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="50">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="51">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">get</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="52">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">get</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="53">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'csrf_token'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">get</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'_csrf_token'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="54">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="55">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getSession</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">set</token>
+        <token name="T_OPEN_BRACKET">(</token>
+      </line>
+      <line no="56">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_STRING">Security</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">LAST_USERNAME</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="57">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+      </line>
+      <line no="58">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="59"/>
+      <line no="60">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="61">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="62"/>
+      <line no="63">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getUser</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserProviderInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$userProvider</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="64">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="65">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">CsrfToken</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'authenticate'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'csrf_token'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="66">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">csrfTokenManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">isTokenValid</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="67">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_THROW">throw</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">InvalidCsrfTokenException</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="68">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="69"/>
+      <line no="70">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entityManager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getRepository</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">User</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">findOneBy</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="71"/>
+      <line no="72">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="73">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_COMMENT">// fail authentication with a custom error</token>
+      </line>
+      <line no="74">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_THROW">throw</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">CustomUserMessageAuthenticationException</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'Email could not be found.'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="75">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="76"/>
+      <line no="77">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="78">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="79"/>
+      <line no="80">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">checkCredentials</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">UserInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="81">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="82">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">passwordEncoder</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">isPasswordValid</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="83">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="84"/>
+      <line no="85">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="86">
+        <token name="T_DOC_COMMENT">     * Used to upgrade (rehash) the user's password automatically over time.</token>
+      </line>
+      <line no="87">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="88">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getPassword</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="89">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="90">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$credentials</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'password'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="91">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="92"/>
+      <line no="93">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">onAuthenticationSuccess</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Request</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">TokenInterface</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$providerKey</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="94">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="95">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$targetPath</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getTargetPath</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$request</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getSession</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$providerKey</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="96">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">RedirectResponse</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$targetPath</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="97">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="98"/>
+      <line no="99">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">RedirectResponse</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">urlGenerator</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">generate</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'admin.realization.index'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="100">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="101"/>
+      <line no="102">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getLoginUrl</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="103">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="104">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">urlGenerator</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">generate</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">self</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">LOGIN_ROUTE</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="105">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="106">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="107"/>
+    </source>
+  </file>
+</phpunit>
