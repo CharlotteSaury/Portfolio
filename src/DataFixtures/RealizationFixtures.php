@@ -31,7 +31,7 @@ class RealizationFixtures extends Fixture implements DependentFixtureInterface
                 for ($j = 1; $j < 5; $j++) {
                     $realization->addTechno($this->getReference('techno'.mt_rand(1, 6)));
                 }
-
+            $this->addReference('realization'.$i, $realization);
             $manager->persist($realization);
         }
 
