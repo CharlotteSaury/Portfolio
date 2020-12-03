@@ -1,6 +1,6 @@
 # CV & Porfolio - Backend PHP / Symfony developer
 
-Personnal portfolio, online here => [charlottesaury.fr]("http://charlottesaury.fr")
+Personnal portfolio, online here => [charlottesaury.fr]("http://www.charlottesaury.fr")
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/1bd65488cbf44c008e1bd3c37428f671)](https://www.codacy.com/gh/CharlotteSaury/Portfolio/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=CharlotteSaury/Portfolio&amp;utm_campaign=Badge_Grade)
 
