@@ -1,10 +1,13 @@
 language: php
-sudo: false
 php:
   - '7.4.0'
 
 services:
   - mysql
+
+before_install:
+  - sudo apt-get install jq
+  - curl -LSs "$(curl -LSs https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r '.assets | map({name, browser_download_url} | select(.name | endswith(".jar"))) | .[0].browser_download_url')" -o codacy-coverage-reporter-assembly.jar
 
 install:
   - composer update
@@ -13,4 +16,6 @@ install:
 
 script:
   - php bin/phpunit
-  - bash <(curl -Ls https://coverage.codacy.com/get.sh) report
+
+after_success:
+  - java -jar codacy-coverage-reporter-assembly.jar report -l Java -r build/reports/jacoco/test/jacocoTestReport.xml
