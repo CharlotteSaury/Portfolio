@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="ExpectationFixtures.php" path="/DataFixtures">
+    <totals>
+      <lines total="35" comments="0" code="35" executable="9" executed="9" percent="100.00"/>
+      <methods count="2" tested="2" percent="100.00"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="1" tested="1" percent="100.00"/>
+      <traits count="0" tested="0" percent="0"/>
+    </totals>
+    <class name="App\DataFixtures\ExpectationFixtures" start="12" executable="9" executed="9" crap="3">
+      <package full="" name="" sub="" category=""/>
+      <namespace name="App\DataFixtures"/>
+      <method name="load" signature="load(ObjectManager $manager)" start="14" end="27" crap="2" executable="8" executed="8" coverage="100"/>
+      <method name="getDependencies" signature="getDependencies()" start="29" end="34" crap="1" executable="1" executed="1" coverage="100"/>
+    </class>
+    <coverage>
+      <line nr="16">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="18">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="19">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="20">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="21">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="23">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="26">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="27">
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+      </line>
+      <line nr="32">
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndex"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testIndexIntegration"/>
+        <covered by="App\Tests\Controller\HomeControllerTest::testContactSubmit"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIndexNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testShowNotAuthenticated"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testAdminRestrictedPageAccess"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationAdminIndexRealizationsPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationCreationPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationCreation"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testIntegrationRealizationEditionPage"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationEdition"/>
+        <covered by="App\Tests\Controller\RealizationControllerTest::testRealizationDeletion"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginPage"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginValidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLoginInvalidCredentials"/>
+        <covered by="App\Tests\Controller\SecurityControllerTest::testLogout"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #0"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #1"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #2"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testUnaccessibleTechnoPagesNotAuthenticated with data set #3"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testRestrictedPageAccessAuthenticated"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnosPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoCreationPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoCreation"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testIntegrationTechnoEditionPage"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoEdition"/>
+        <covered by="App\Tests\Controller\TechnoControllerTest::testTechnoDeletion"/>
+        <covered by="App\Tests\Entity\RealizationTest::testInvalidRealizationUniqueTitle"/>
+        <covered by="App\Tests\Entity\TechnoTest::testInvalidUniqueTitle"/>
+        <covered by="App\Tests\Repository\ExpectationRepositoryTest::testExpectationFixturesNumber"/>
+        <covered by="App\Tests\Repository\RealizationRepositoryTest::testRealizationFixturesNumber"/>
+        <covered by="App\Tests\Repository\SkillRepositoryTest::testSkillFixturesNumber"/>
+        <covered by="App\Tests\Repository\TechnoRepositoryTest::testTechnoFixturesNumber"/>
+        <covered by="App\Tests\Repository\UserRepositoryTest::testUserFixturesNumber"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">DataFixtures</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4"/>
+      <line no="5">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Faker</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Factory</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="6">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Entity</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Expectation</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="7">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Doctrine</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Persistence</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">ObjectManager</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">App</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">DataFixtures</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">RealizationFixtures</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="9">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Doctrine</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Bundle</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">FixturesBundle</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Fixture</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="10">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Doctrine</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Common</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">DataFixtures</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">DependentFixtureInterface</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="11"/>
+      <line no="12">
+        <token name="T_CLASS">class</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">ExpectationFixtures</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXTENDS">extends</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Fixture</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IMPLEMENTS">implements</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">DependentFixtureInterface</token>
+      </line>
+      <line no="13">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="14">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">load</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">ObjectManager</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$manager</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="15">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="16">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$faker</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Faker</token>
+        <token name="T_NS_SEPARATOR">\</token>
+        <token name="T_STRING">Factory</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">create</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'fr_FR'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="17"/>
+      <line no="18">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_FOR">for</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$i</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LNUMBER">0</token>
+        <token name="T_SEMICOLON">;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$i</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LT">&lt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LNUMBER">5</token>
+        <token name="T_SEMICOLON">;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$i</token>
+        <token name="T_INC">++</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="19">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$expectation</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NEW">new</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Expectation</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="20">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$expectation</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">setDescription</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$faker</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">text</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="21">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">setRealization</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getReference</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'realization'</token>
+        <token name="T_DOT">.</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">mt_rand</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_LNUMBER">1</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_LNUMBER">10</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="22"/>
+      <line no="23">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$manager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">persist</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$expectation</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="24">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="25"/>
+      <line no="26">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$manager</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">flush</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="27">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="28"/>
+      <line no="29">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getDependencies</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+      </line>
+      <line no="30">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="31">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="32">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_STRING">RealizationFixtures</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_CLASS">class</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="33">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="34">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="35">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="36"/>
+    </source>
+  </file>
+</phpunit>
